@@ -3,41 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Электроника</title>
-  <meta name="description" content="Проекты по электронике и программированию." />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+  <title>AutoEjector для OctoPrint</title>
+  <meta name="description" content="Проект автоматической системы сброса 3D-модели для принтера Prusa MK3S" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/script.js" defer></script>
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
   <meta name="theme-color" content="#ffffff" />
 </head>
 <body>
   <header>Моё портфолио</header>
 
-  <!-- Навигационное меню -->
   <nav>
-    <a href="../index.html" class="nav-link">Главная</a>
-    <a href="../3d.html" class="nav-link">3D-печать</a>
-    <a href="../electronics.html" class="nav-link active">Электроника</a>
-    <a href="../programming.html" class="nav-link">Программирование</a>
-    <a href="../university.html" class="nav-link">Университет</a>
-    <a href="../hobby.html" class="nav-link">Хобби</a>
+    <a href="/index.html" class="nav-link">Главная</a>
+    <a href="/3d.html" class="nav-link">3D-печать</a>
+    <a href="/electronics.html" class="nav-link active">Электроника</a>
+    <a href="/programming.html" class="nav-link">Программирование</a>
+    <a href="/university.html" class="nav-link">Университет</a>
+    <a href="/hobby.html" class="nav-link">Хобби</a>
   </nav>
   
-  <main class="project-page">
-    <div class="project-title">AutoEjector для OctoPrint</div>
+  <main class="section-page">
+    <div class="project-content">
+      <h1 class="section-title">AutoEjector для OctoPrint</h1>
 
-    <div class="carousel">
-      <img src="../img/photo1.jpg" alt="Фото 1">
-      <img src="../img/photo2.jpg" alt="Фото 2">
-      <img src="../img/photo3.jpg" alt="Фото 3">
-    </div>
+      <div class="project-gallery">
+        <img src="/img/ejector1.jpg" alt="Фото проекта AutoEjector 1" class="project-image">
+        <img src="/img/ejector2.jpg" alt="Фото проекта AutoEjector 2" class="project-image">
+        <img src="/img/ejector3.jpg" alt="Фото проекта AutoEjector 3" class="project-image">
+      </div>
 
-    <div class="project-description">
-      <p>Проект представляет собой автоматическую систему сброса 3D-модели после завершения печати на принтере Prusa MK3S. Я адаптировал и существенно переработал существующий проект, реализовав его в виде полноценного плагина для OctoPrint на Python. Также были внесены изменения в прошивку Arduino, управляющую механизмом сброса.</p>
+      <div class="project-details">
+        <h2>Описание проекта</h2>
+        <p>Проект представляет собой автоматическую систему сброса 3D-модели после завершения печати на принтере Prusa MK3S. Я адаптировал и существенно переработал существующий проект, реализовав его в виде полноценного плагина для OctoPrint на Python. Также были внесены изменения в прошивку Arduino, управляющую механизмом сброса.</p>
 
-      <p>Помимо программирования, я использовал навыки 3D-моделирования для разработки и печати механической части устройства, а также применил базовые знания электроники при сборке схемы управления. Проект значительно ускоряет процесс серийной печати, устраняя необходимость ручного вмешательства между задачами.</p>
+        <h2>Реализация</h2>
+        <p>Помимо программирования, я использовал навыки 3D-моделирования для разработки и печати механической части устройства, а также применил базовые знания электроники при сборке схемы управления. Проект значительно ускоряет процесс серийной печати, устраняя необходимость ручного вмешательства между задачами.</p>
 
-      <p>Навыки: Python, Arduino (C++), OctoPrint API, 3D-моделирование (Blender/Fusion 360), 3D-печать, пайка, проектирование схем.</p>
+        <h2>Использованные технологии</h2>
+        <ul class="skills-list">
+          <li>Python (разработка плагина для OctoPrint)</li>
+          <li>Arduino (C++) (прошивка для управления устройством)</li>
+          <li>OctoPrint API</li>
+          <li>3D-моделирование (Blender/Fusion 360)</li>
+          <li>3D-печать</li>
+          <li>Электроника и пайка</li>
+          <li>Проектирование схем</li>
+        </ul>
+      </div>
     </div>
   </main>
 </body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="mailto:pavel.ruh11@gmail.com">Email</a>
+      <a href="https://github.com/Pavelruh" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pavel-rukhliadev/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Рухлядев Павел. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
 </html>
