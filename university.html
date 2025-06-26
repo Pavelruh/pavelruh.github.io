@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Университет</title>
+  <meta name="description" content="Проекты для университета." />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+<body>
+  <header>Моё портфолио</header>
+
+  <!-- Навигационное меню -->
+  <nav>
+    <a href="/index.html" class="nav-link">Главная</a>
+    <a href="/3d.html" class="nav-link">3D-печать</a>
+    <a href="/electronics.html" class="nav-link">Электроника</a>
+    <a href="/programming.html" class="nav-link">Программирование</a>
+    <a href="/university.html" class="nav-link active">Университет</a>
+    <a href="/hobby.html" class="nav-link">Хобби</a>
+  </nav>
+
+  <!-- Основной контент страницы -->
+  <main class="section-page with-filter">
+    <!-- Боковой фильтр -->
+    <aside class="tag-filter">
+      <h4>Фильтры</h4>
+      <ul>
+        <li><button>1</button></li>
+        <li><button>2</button></li>
+        <li><button>3</button></li>
+        <!-- Добавьте другие теги при необходимости -->
+      </ul>
+    </aside>
+
+    <!-- Список проектов -->
+    <div class="project-content">
+      <h2 class="section-title">Университет</h2>
+
+      <div class="project-list">
+        <!-- Каждая карточка — это ссылка на страницу проекта -->
+        <a class="project-card" href="/project_pages/project1.html">
+          <h3>Project Title</h3>
+          <p>Project description</p>
+          <img src="/img/miniatures.jpg" alt="alt text" />
+        </a>
+
+        <a class="project-card" href="/project_pages/project1.html">
+          <h3>Project Title</h3>
+          <p>Project description</p>
+          <img src="/img/miniatures.jpg" alt="alt text" />
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
