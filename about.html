@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Электроника</title>
-  <meta name="description" content="Проекты по электронике и программированию." />
+  <title>Моё портфолио</title>
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/script.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
@@ -13,7 +12,6 @@
 <body>
   <header>Моё портфолио</header>
 
-  <!-- Навигационное меню -->
   <nav>
     <a href="/index.html" class="nav-link">Главная</a>
     <a href="/3d.html" class="nav-link">3D-печать</a>
@@ -23,25 +21,17 @@
     <a href="/about.html" class="nav-link">Обо мне</a>
   </nav>
 
-  <!-- Основной контент страницы -->
-  <main class="section-page with-sidebar">
-    <!-- Боковой фильтр -->
-    <aside class="sidebar-filter">
-      <h4>Фильтры</h4>
-      <ul class="filter-list">
-        <li><button class="filter-button active" data-filter="all">Все проекты</button></li>
-        <li><button class="filter-button" data-filter="arduino">Arduino</button></li>
-        <li><button class="filter-button" data-filter="raspberry">Raspberry Pi</button></li>
-        <li><button class="filter-button" data-filter="plugin">Плагины</button></li>
-        <li><button class="filter-button" data-filter="in-progress">В работе</button></li>
-      </ul>
-    </aside>
-    
-    <div class="main-content">
-      <!-- Список проектов -->
-      <h2 class="section-title">Электроника</h2>
-      <div class="project-grid">
-        <!-- Заполняется с JS-->
+  <main class="section-page">
+    <div class="project-content">
+      <h2 class="section-title">Обо мне</h2>
+      
+      <div class="about-me">
+        <p>Здесь будет краткое описание обо мне и цели сайта.</p>
+        
+        <div class="photo-gallery">
+          <img src="/img/profile.jpg" alt="Мое фото" class="profile-photo">
+          <!-- Можно добавить больше фото при необходимости -->
+        </div>
       </div>
     </div>
   </main>

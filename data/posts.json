@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Название поста",
+    "description": "Описание поста",
+    "images": [
+        "/img/ejector1.jpg",
+        "/img/ejector2.jpg",
+        "/img/ejector3.jpg"
+    ],
+    "date": "2023-05-15"
+  }
+]

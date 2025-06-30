@@ -3,26 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Моё портфолио</title>
+  <title>Главная</title>
+  <meta name="description" content="Проекты по электронике и программированию." />
   <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/script.js" defer></script>
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+  <meta name="theme-color" content="#ffffff" />
 </head>
 <body>
   <header>Моё портфолио</header>
 
+  <!-- Навигационное меню -->
   <nav>
-    <a href="/index.html" class="nav-link active">Главная</a>
+    <a href="/index.html" class="nav-link">Главная</a>
     <a href="/3d.html" class="nav-link">3D-печать</a>
     <a href="/electronics.html" class="nav-link">Электроника</a>
     <a href="/programming.html" class="nav-link">Программирование</a>
     <a href="/university.html" class="nav-link">Университет</a>
-    <a href="/hobby.html" class="nav-link">Хобби</a>
+    <a href="/about.html" class="nav-link">Обо мне</a>
   </nav>
 
+  <!-- Основной контент страницы -->
   <main class="home-page">
-    <section class="intro">
-      <h2>Обо мне</h2>
-      <p>Здесь будет краткое описание обо мне и цели сайта (заполните самостоятельно).</p>
+    <section class="featured-projects">
+      <h2>Последние проекты</h2>
+      <div class="project-grid">
+        <!-- Карточки будут вставлены через JS -->
+      </div>
     </section>
   </main>
 </body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="mailto:pavel.ruh11@gmail.com">Email</a>
+      <a href="https://github.com/Pavelruh" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pavel-rukhliadev/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Рухлядев Павел. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
 </html>

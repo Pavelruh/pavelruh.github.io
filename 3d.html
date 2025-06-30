@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3D-Печать</title>
-  <meta name="description" content="Проекты по 3D-Печати." />
+  <meta name="description" content="Проекты по электронике и программированию." />
   <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/script.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
   <meta name="theme-color" content="#ffffff" />
 </head>
@@ -19,39 +20,26 @@
     <a href="/electronics.html" class="nav-link">Электроника</a>
     <a href="/programming.html" class="nav-link">Программирование</a>
     <a href="/university.html" class="nav-link">Университет</a>
-    <a href="/hobby.html" class="nav-link">Хобби</a>
+    <a href="/about.html" class="nav-link">Обо мне</a>
   </nav>
 
   <!-- Основной контент страницы -->
-  <main class="section-page with-filter">
+  <main class="section-page with-sidebar">
     <!-- Боковой фильтр -->
-    <aside class="tag-filter">
+    <aside class="sidebar-filter">
       <h4>Фильтры</h4>
-      <ul>
-        <li><button>Миниатюры</button></li>
-        <li><button>Разноцветная печать</button></li>
-        <li><button>Обработка</button></li>
-        <!-- Добавьте другие теги при необходимости -->
+      <ul class="filter-list">
+        <li><button class="filter-button active" data-filter="all">Все проекты</button></li>
+        <li><button class="filter-button" data-filter="1">1</button></li>
+        <li><button class="filter-button" data-filter="in-progress">В работе</button></li>
       </ul>
     </aside>
-
-    <!-- Список проектов -->
-    <div class="project-content">
-      <h2 class="section-title">3D-печать</h2>
-
-      <div class="project-list">
-        <!-- Каждая карточка — это ссылка на страницу проекта -->
-        <a class="project-card" href="/project_pages/project1.html">
-          <h3>Миниатюры и мини-катаны</h3>
-          <p>Модели, напечатанные с высокой детализацией и ручной обработкой.</p>
-          <img src="/img/miniatures.jpg" alt="Миниатюры" />
-        </a>
-
-        <a class="project-card" href="/project_pages/project1.html">
-          <h3>Разноцветные значки</h3>
-          <p>Печать с поочерёдной сменой пластика для получения цветных моделей.</p>
-          <img src="/img/badges.jpg" alt="Значки" />
-        </a>
+    
+    <div class="main-content">
+      <!-- Список проектов -->
+      <h2 class="section-title">3D-Печать</h2>
+      <div class="project-grid">
+        <!-- Заполняется с JS-->
       </div>
     </div>
   </main>

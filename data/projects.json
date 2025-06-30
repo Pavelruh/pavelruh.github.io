@@ -1,0 +1,99 @@
+[
+  {
+    "id": "auto-ejector",
+    "title": "AutoEjector для 3D-принтера",
+    "section": "electronics",
+    "featured": true,
+    "description": "Система автоматического выброса модели после печати",
+    "post": [{
+        "description": "Проект представляет собой автоматическую систему сброса 3D-модели после завершения печати на принтере Prusa MK3S. Я адаптировал и существенно переработал существующий проект, реализовав его в виде полноценного плагина для OctoPrint на Python. Также были внесены изменения в прошивку Arduino, управляющую механизмом сброса.",
+        "realisation": "Помимо программирования, я использовал навыки 3D-моделирования для разработки и печати механической части устройства, а также применил базовые знания электроники при сборке схемы управления. Проект значительно ускоряет процесс серийной печати, устраняя необходимость ручного вмешательства между задачами.",
+        "skills": [
+            "Python",
+            "Arduino (C++)",
+            "OctoPrint API",
+            "3D-моделирование",
+            "3D-печать",
+            "Электроника и пайка",
+            "Проектирование схем"
+        ]
+    }],
+    "images": [
+        "/img/ejector1.jpg",
+        "/img/ejector2.jpg",
+        "/img/ejector3.jpg"
+    ],
+    "tags": "arduino raspberry",
+    "status": "completed",
+    "date": "2025-06-30"
+  },
+  {
+    "id": "id",
+    "title": "Титле",
+    "section": "3d",
+    "featured": true,
+    "description": "ну 3д типа",
+    "post": [{
+        "description": "дескриптион лонг",
+        "realisation": "реализасион",
+        "skills": [
+            "скилл1",
+            "скилл1"
+        ]
+    }],
+    "images": [
+        "/img/1.jpg",
+        "/img/2.jpg",
+        "/img/3.jpg"
+    ],
+    "tags": "",
+    "status": "in-progress",
+    "date": "2025-06-30"
+  },
+  {
+    "id": "id",
+    "title": "Титле",
+    "section": "programming",
+    "featured": true,
+    "description": "ну прога че",
+    "post": [{
+        "description": "дескриптион лонг",
+        "realisation": "реализасион",
+        "skills": [
+            "скилл1",
+            "скилл1"
+        ]
+    }],
+    "images": [
+        "/img/1.jpg",
+        "/img/2.jpg",
+        "/img/3.jpg"
+    ],
+    "tags": "",
+    "status": "completed",
+    "date": "2025-06-30"
+  },
+  {
+    "id": "id",
+    "title": "Титле",
+    "section": "university",
+    "featured": true,
+    "description": "универ ага",
+    "post": [{
+        "description": "дескриптион лонг",
+        "realisation": "реализасион",
+        "skills": [
+            "скилл1",
+            "скилл1"
+        ]
+    }],
+    "images": [
+        "/img/1.jpg",
+        "/img/2.jpg",
+        "/img/3.jpg"
+    ],
+    "tags": "",
+    "status": "completed",
+    "date": "2025-06-30"
+  }
+]
