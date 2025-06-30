@@ -56,6 +56,34 @@ nav a:hover {
   color: var(--accent-color);
 }
 
+/* Секция проектов на главной */
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.featured-projects {
+  margin-bottom: 3rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Увеличенные карточки на главной */
+.home-page .project-card {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.home-page .project-card:hover {
+  transform: scale(1.03);
+}
+
 .section-page-grid {
   max-width: 1200px;
   margin: 2rem auto;
@@ -168,15 +196,13 @@ nav a:hover {
 }
 
 .project-card.hidden {
-  transform: scale(0.9);
+  display: none !important;
+  /* Или альтернатива: */
   opacity: 0;
   height: 0;
-  margin: 0;
   padding: 0;
+  margin: 0;
   overflow: hidden;
-  display: none !important;
-  transform: scale(0.8) translateY(0) !important;
-  pointer-events: none;
 }
 
 .project-card:hover {
@@ -193,6 +219,13 @@ nav a:hover {
   margin: 0 0 0.5rem;
 }
 
+.project-date {
+  color: #777;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .project-card img {
   width: 100%;
   border-radius: 0.5rem;
@@ -200,6 +233,67 @@ nav a:hover {
   height: auto;
   max-height: 200px;
   margin-top: 0.5rem;
+}
+
+/* Карточка в работе */
+.project-card[data-status="in-progress"] {
+  position: relative;
+  background: #f5f5f5;
+  border: 1px dashed #ccc;
+  transition: all 0.3s ease;
+}
+/* Эффекты при наведении */
+.project-card[data-status="in-progress"]:hover {
+  background: #e0e0e0 !important; /* Серая подсветка */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  transform: none !important; /* Отключаем подъем */
+}
+
+/* Размытие изображений */
+.project-card[data-status="in-progress"] .hover-carousel img {
+  filter: blur(8px);
+  opacity: 0.8;
+  transition: filter 0.4s ease;
+}
+
+/* Размытие текста */
+.project-card[data-status="in-progress"] h3,
+.project-card[data-status="in-progress"] p,
+.project-card[data-status="in-progress"] span {
+  color: #666;
+  filter: blur(4px);
+  user-select: none;
+}
+
+/* Базовый стиль бейджа */
+.progress-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Цвета для разных статусов */
+[data-status="completed"] .progress-badge {
+  background: var(--accent-color);
+}[data-status="completed"] .progress-badge::before {
+  content: "Done";
+}
+
+[data-status="in-progress"] .progress-badge {
+  background: var(--active-link);
+}[data-status="in-progress"] .progress-badge::before {
+  content: "WIP";
+}
+/* Запрет эффектов для бейджа и иконок */
+.project-card[data-status="in-progress"] .progress-badge,
+.project-card[data-status="in-progress"] .featured-badge {
+  filter: none !important;
 }
 
 .about-me {
@@ -224,10 +318,10 @@ nav a:hover {
   margin-top: 2rem;
 }
 
-.project-content {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+.project-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .project-image {
@@ -248,25 +342,18 @@ nav a:hover {
   margin: 2rem 0;
 }
 
-.project-details {
-  margin-top: 2rem;
-}
-
-.project-details h2 {
-  color: var(--accent-color);
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-}
-
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  padding-left: 1rem;
+  margin-top: 1rem;
 }
 
-.skills-list li {
-  margin-bottom: 0.5rem;
+.skill-tag {
+  background: rgba(0, 136, 204, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
 }
 
 /* Стили для карусели */
