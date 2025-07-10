@@ -1,0 +1,565 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --accent-color: #0088cc;
+  --card-bg: #fff;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --hover-color: #e0f3ff;
+  --active-link: #0088cc22;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  background: #fff;
+  box-shadow: 0 1px 4px var(--card-shadow);
+}
+
+/* Навигационное меню */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+}
+
+/* Подсветка активного раздела */
+nav a.active {
+  background: var(--active-link);
+  color: var(--accent-color);
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* Секция проектов на главной */
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.featured-projects {
+  margin-bottom: 3rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Увеличенные карточки на главной */
+.home-page .project-card {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.home-page .project-card:hover {
+  transform: scale(1.03);
+}
+
+.section-page-grid {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  box-shadow: 0 2px 6px var(--card-shadow);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+}
+
+.section-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  box-shadow: 0 2px 6px var(--card-shadow);
+  border-radius: 1rem;
+}
+.section-page.with-sidebar {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Боковая панель с фильтрами */
+.sidebar-filter {
+  position: sticky;
+  top: 120px; /* Отступ от верхнего края */
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px var(--card-shadow);
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.filter-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+  background: var(--hover-color);
+}
+
+.filter-button.active {
+  background: var(--active-link);
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* Основной контент */
+.main-content {
+  width: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .section-page.with-sidebar {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar-filter {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Заголовок раздела */
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: all 0.3s ease;
+  transform-origin: center top;
+  transform: translateY(0);
+}
+
+.project-card.hidden {
+  display: none !important;
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background-color: var(--hover-color);
+}
+
+.project-card h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.project-card p {
+  margin: 0 0 0.5rem;
+}
+
+.project-date {
+  color: #777;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  height: auto;
+  max-height: 200px;
+  margin-top: 0.5rem;
+}
+/* Карточка в работе */
+.project-card[data-status="in-progress"] {
+  position: relative;
+  background: #f5f5f5;
+  border: 1px dashed #ccc;
+  transition: all 0.3s ease;
+}
+/* Эффекты при наведении */
+.project-card[data-status="in-progress"]:hover {
+  background: #e0e0e0 !important; /* Серая подсветка */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  transform: none !important; /* Отключаем подъем */
+}
+/* Размытие изображений */
+.project-card[data-status="in-progress"] .hover-carousel img {
+  filter: blur(8px);
+  opacity: 0.8;
+  transition: filter 0.4s ease;
+}
+/* Размытие текста */
+.project-card[data-status="in-progress"] h3,
+.project-card[data-status="in-progress"] p,
+.project-card[data-status="in-progress"] span {
+  color: #666;
+  filter: blur(4px);
+  user-select: none;
+}
+/* Базовый стиль бейджа */
+.progress-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Цвета для разных статусов */
+[data-status="completed"] .progress-badge {
+  background: var(--accent-color);
+}[data-status="completed"] .progress-badge::before {
+  content: "Done";
+}
+
+[data-status="in-progress"] .progress-badge {
+  background: var(--active-link);
+}[data-status="in-progress"] .progress-badge::before {
+  content: "WIP";
+}
+/* Запрет эффектов для бейджа и иконок */
+.project-card[data-status="in-progress"] .progress-badge,
+.project-card[data-status="in-progress"] .featured-badge {
+  filter: none !important;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.02);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background: rgba(0, 136, 204, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Стили для карусели */
+.card-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  aspect-ratio: 16/9; /* Фиксированное соотношение сторон */
+}
+
+.hover-carousel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hover-carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-carousel img.active {
+  opacity: 1;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--active-link);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: var(--accent-color);
+}
+@media (hover: none) {
+  .hover-carousel img {
+    opacity: 1;
+    transition: none;
+  }
+  
+  .hover-carousel img:not(:first-child) {
+    display: none;
+  }
+  
+  .carousel-dots {
+    display: none;
+  }
+}
+/* Выбор языка */
+.language-selector {
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+.language-current {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  color: var(--text-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-current:hover {
+  background: var(--hover-color);
+}
+.language-current::after {
+  content: '▼';
+  font-size: 0.6rem;
+  margin-left: 0.3rem;
+  opacity: 0.7;
+}
+
+
+.language-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: var(--card-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0 0;
+  min-width: 120px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.language-selector:hover .language-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-dropdown li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.language-dropdown li:hover {
+  background: var(--hover-color);
+}
+
+.language-dropdown li.active {
+  background: var(--active-link);
+  color: var(--accent-color);
+  position: relative;
+  padding-left: 1.5rem;
+}
+.language-dropdown li.active::before {
+  content: '✓';
+  position: absolute;
+  left: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .nav-center {
+    order: 2;
+    width: 100%;
+  }
+  
+  .language-selector {
+    order: 1;
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
+
+/* Футер */
+.site-footer {
+  background: #f5f5f5;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 1px solid #eee;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  color: #777;
+  font-size: 0.9rem;
+}

@@ -4,22 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Университет</title>
-  <meta name="description" content="Проекты для универа." />
-  <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/script.js" defer></script>
-  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="alternate" hreflang="en" href="/en/university.html" />
+  <link rel="alternate" hreflang="ru" href="/ru/university.html" />
+  <link rel="alternate" hreflang="fr" href="/fr/university.html" />
+  <meta name="description" content="Раздел проектов для университета" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/card-loader.js" defer></script>
+  <script src="assets/js/language-selector.js" defer></script>
+  <script src="assets/js/section-highlight.js" defer></script>
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
   <meta name="theme-color" content="#ffffff" />
 </head>
 <body>
-  <header>Моё портфолио</header>
+  <header>Мои проекты</header>
+
   <!-- Навигационное меню -->
   <nav>
-    <a href="/index.html" class="nav-link">Главная</a>
-    <a href="/3d.html" class="nav-link active">3D-печать</a>
-    <a href="/electronics.html" class="nav-link">Электроника</a>
-    <a href="/programming.html" class="nav-link">Программирование</a>
-    <a href="/university.html" class="nav-link">Университет</a>
-    <a href="/about.html" class="nav-link">Обо мне</a>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="3d.html" class="nav-link">3D-печать</a>
+      <a href="electronics.html" class="nav-link">Электроника</a>
+      <a href="programming.html" class="nav-link">Программирование</a>
+      <a href="university.html" class="nav-link">Университет</a>
+      <a href="about.html" class="nav-link">Обо мне</a>
+    </div>
+    
+    <div class="language-selector">
+      <button class="language-current">RU</button>
+      <ul class="language-dropdown">
+        <li data-lang="en">English</li>
+        <li data-lang="ru" class="active">Русский</li>
+        <li data-lang="fr">Français</li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Основной контент страницы -->
