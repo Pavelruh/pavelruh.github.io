@@ -1,0 +1,83 @@
+[
+  {
+    "id": "auto-ejector",
+    "title": "AutoEjector для 3D-принтера",
+    "section": "electronics",
+    "featured": true,
+    "description": "(Представь, что это английский)Система автоматического выброса модели после печати",
+    "skills": [
+      "Python",
+      "Arduino (C++)",
+      "OctoPrint API",
+      "3D-моделирование",
+      "3D-печать",
+      "Электроника и пайка",
+      "Проектирование схем"
+    ],
+    "images": [
+      "img/ejector1.jpg",
+      "img/ejector2.jpg",
+      "img/ejector3.jpg"
+    ],
+    "tags": "arduino raspberry",
+    "status": "completed",
+    "date": "2025-06-30"
+  },
+  {
+    "id": "id",
+    "title": "Титле",
+    "section": "3d",
+    "featured": true,
+    "description": "ну 3д типа",
+    "skills": [
+      "скилл1",
+      "скилл1"
+    ],
+    "images": [
+      "img/1.jpg",
+      "img/2.jpg",
+      "img/3.jpg"
+    ],
+    "tags": "",
+    "status": "in-progress",
+    "date": "2025-06-30"
+  },
+  {
+    "id": "id",
+    "title": "Титле",
+    "section": "programming",
+    "featured": true,
+    "description": "ну прога че",
+    "skills": [
+      "скилл1",
+      "скилл1"
+    ],
+    "images": [
+      "img/1.jpg",
+      "img/2.jpg",
+      "img/3.jpg"
+    ],
+    "tags": "",
+    "status": "completed",
+    "date": "2025-06-30"
+  },
+  {
+    "id": "id",
+    "title": "Титле",
+    "section": "university",
+    "featured": true,
+    "description": "универ ага",
+    "skills": [
+      "скилл1",
+      "скилл1"
+    ],
+    "images": [
+      "/img/1.jpg",
+      "/img/2.jpg",
+      "/img/3.jpg"
+    ],
+    "tags": "",
+    "status": "completed",
+    "date": "2025-06-30"
+  }
+]

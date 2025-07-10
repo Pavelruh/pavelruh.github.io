@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
   
   // Загрузка и обработка проектов
-  fetch('/data/projects.json')
+  fetch('data/projects.json')
     .then(response => response.json())
     .then(projects => {
       // Сортируем все проекты по дате (новые сначала)
@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Для проектов в работе используем div вместо ссылки
     const tag = isInProgress ? 'div' : 'a';
-    const hrefAttr = isInProgress ? '' : `href="/projects/project.html?id=${project.id}"`;
+    var hrefAttr = isInProgress ? '' : `href="projects/${project.id}/${project.id}.html"`;
+    if (project.id === '' || project.id === 'id') hrefAttr = 'href="/404.html"';
 
     return `
       <${tag} class="project-card" ${hrefAttr}" 
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="hover-carousel">
           <div class="carousel-images">
           ${project.images.map(img => 
-            `<img src="${img}" alt="${project.title}">`).join('')}
+            `<img src="projects/${project.id}/${img}" alt="${project.title}">`).join('')}
           </div>
         </div>
       </${tag}>
@@ -157,22 +158,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   }
-});
-
-// Page selector highlight
-document.addEventListener('DOMContentLoaded', function() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-link');
-  
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href').split('/').pop();
-    if (currentPage === linkPage || 
-        (currentPage === '' && linkPage === 'index.html')) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
 });
 
 // Filter posts
