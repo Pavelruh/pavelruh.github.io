@@ -11,8 +11,20 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script src="assets/js/section-highlight.js" defer></script>
   <script src="assets/js/language-selector.js" defer></script>
+  <script src="assets/js/theme-toggle.js" defer></script>
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
   <meta name="theme-color" content="#ffffff" />
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      if (initialTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 </head>
 <body>
   <header>My projects</header>
@@ -34,6 +46,12 @@
         <li data-lang="ru" class="active">Русский</li>
         <li data-lang="fr">Français</li>
       </ul>
+    </div>
+    <div class="theme-toggle">
+      <button id="theme-toggle-btn" aria-label="Toggle theme">
+        <img class="sun-icon theme-icon" src="assets/icons/sun-svgrepo-com.svg" />
+        <img class="moon-icon theme-icon" src="assets/icons/moon-svgrepo-com.svg" />
+      </button>
     </div>
   </nav>
 
