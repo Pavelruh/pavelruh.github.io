@@ -51,15 +51,6 @@
   .site-footer {
     border-top-color: var(--border-color);
   }
-
-  /* Коррекция изображений */
-  img {
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
-  }
-  img:hover {
-    opacity: 1;
-  }
 }
 
 body {
