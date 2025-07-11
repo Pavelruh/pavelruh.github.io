@@ -24,60 +24,106 @@
     "date": "2025-06-30"
   },
   {
-    "id": "id",
-    "title": "Титле",
+    "id": "mini-katanas",
+    "title": "Мини катаны",
     "section": "3d",
     "featured": true,
-    "description": "ну 3д типа",
+    "description": "Мини катаны, распечатанные на 3д принтере, с мельчайшей детализацией(почти)",
     "skills": [
-      "скилл1",
-      "скилл1"
+      "3D-моделирование",
+      "Обработка моделей",
+      "Ювелирка(типа)"
     ],
     "images": [
-      "img/1.jpg",
-      "img/2.jpg",
-      "img/3.jpg"
+      "img/001.jpg",
+      "img/002.jpg",
+      "img/003.jpg",
+      "img/004.jpg",
+      "img/005.jpg"
     ],
-    "tags": "",
-    "status": "in-progress",
-    "date": "2025-06-30"
+    "tags": "anime miniatures",
+    "status": "completed",
+    "date": "2023-07-01"
   },
   {
-    "id": "id",
-    "title": "Титле",
+    "id": "mita-miniature",
+    "title": "Фигурка Миты из Miside",
+    "section": "3d",
+    "featured": true,
+    "description": "Самая сложная фигурка. До сих пор в работе. Грандиозная я бы сказал.",
+    "skills": [
+      "3D-печать",
+      "Blender",
+      "Обработка моделей",
+      "Шпаклевка и шлифовка",
+      "Покраска"
+    ],
+    "images": [
+      "img/008.jpg",
+      "img/009.jpg",
+      "img/001.jpg"
+    ],
+    "tags": "games miniature",
+    "status": "in-progress",
+    "date": "2025-07-11"
+  },
+  {
+    "id": "organizer-on-wall",
+    "title": "Органайзер на стену",
+    "section": "3d",
+    "featured": true,
+    "description": "Просто органайзер на стену для скетчбуков и канцелярии.",
+    "skills": [
+      "3D-моделирование",
+      "3D-печать"
+    ],
+    "images": [
+      "img/001.jpg",
+      "img/002.jpg"
+    ],
+    "tags": "useful",
+    "status": "completed",
+    "date": "2025-07-07"
+  },
+  {
+    "id": "personal-website",
+    "title": "Этот самый сайт-портфолио",
     "section": "programming",
     "featured": true,
-    "description": "ну прога че",
+    "description": "Сделал себе сайт для удобного хранения всех моих проектов, плюс работает как портфолио. С помощью нейросетей разумеется.",
     "skills": [
-      "скилл1",
-      "скилл1"
+      "HTML",
+      "JS",
+      "Нейросети",
+      "Web"
     ],
     "images": [
-      "img/1.jpg",
-      "img/2.jpg",
-      "img/3.jpg"
+      "img/001.png",
+      "img/002.jpg"
     ],
-    "tags": "",
+    "tags": "web",
     "status": "completed",
-    "date": "2025-06-30"
+    "date": "2025-07-07"
   },
   {
-    "id": "id",
-    "title": "Титле",
-    "section": "university",
+    "id": "stitch-miniature",
+    "title": "Фигурка стича из мультика",
+    "section": "3d",
     "featured": true,
-    "description": "универ ага",
+    "description": "Фигурка стича в качестве подарка, напечатанная и покрашенная вручную.",
     "skills": [
-      "скилл1",
-      "скилл1"
+      "Обработка моделей",
+      "3D-печать",
+      "Покраска"
     ],
     "images": [
-      "/img/1.jpg",
-      "/img/2.jpg",
-      "/img/3.jpg"
+      "img/001.jpg",
+      "img/003.jpg",
+      "img/004.jpg",
+      "img/005.jpg"
     ],
-    "tags": "",
+    "tags": "miniatures painting",
     "status": "completed",
-    "date": "2025-06-30"
+    "date": "2025-05-08"
   }
 ]

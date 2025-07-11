@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let filteredProjects;
       if (currentPage === 'index') {
         // На главной - только featured
-        filteredProjects = getFeaturedProjects(sortedProjects).slice(0, 5);
+        filteredProjects = getFeaturedProjects(sortedProjects).slice(0, 9);
       } else {
         // На других страницах - по разделу
         filteredProjects = getProjectsBySection(sortedProjects, currentPage);
