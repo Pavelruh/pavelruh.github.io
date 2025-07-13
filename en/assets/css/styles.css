@@ -193,6 +193,7 @@ nav a:hover {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  color: var(--text-color);
 }
 
 .filter-button:hover {
@@ -374,6 +375,9 @@ nav a:hover {
   margin: 2rem auto;
   padding: 0 1rem;
 }
+.project-page a{
+  color: var(--accent-color);
+}
 
 .project-image {
   width: 100%;
@@ -405,6 +409,133 @@ nav a:hover {
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   font-size: 0.9rem;
+}
+/* Контейнер для группы изображений */
+.image-container {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+  gap: 1rem;
+}
+
+/* Стили для контентных изображений */
+.content-image {
+  height: 300px; /* Фиксированная высота */
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Варианты размеров с сохранением пропорций */
+.image-small {
+  max-width: 300px;
+  height: 300px;
+}
+
+.image-medium {
+  max-width: 400px;
+  height: 400px;
+}
+
+.image-large {
+  max-width: 600px;
+  height: 500px;
+}
+
+/* Подпись для группы изображений */
+.image-caption {
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--subtext-color);
+  margin-top: 0.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Полноэкранный режим для контентных изображений */
+.content-image-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.content-image-fullscreen.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content-image-fullscreen img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.content-image-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.content-image-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .content-image,
+  .image-small,
+  .image-medium,
+  .image-large {
+    height: auto;
+    max-height: 200px;
+    width: 100%;
+  }
+}
+
+/* Для темной темы */
+[data-theme="dark"] .content-image {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
+
+[data-theme="dark"] .content-image:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 1;
 }
 
 /* Стили для карусели */

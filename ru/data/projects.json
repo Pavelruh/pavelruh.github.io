@@ -114,13 +114,15 @@
     "skills": [
       "Обработка моделей",
       "3D-печать",
+      "Шпаклевка",
+      "Шлифовка",
       "Покраска"
     ],
     "images": [
       "img/001.jpg",
-      "img/003.jpg",
-      "img/004.jpg",
-      "img/005.jpg"
+      "img/004_1.jpg",
+      "img/006_1.jpg",
+      "img/010.jpg"
     ],
     "tags": "miniatures painting",
     "status": "completed",
