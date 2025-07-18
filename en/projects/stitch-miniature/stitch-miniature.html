@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="alternate" hreflang="en" href="/en/project/project-template/project-template.html" />
+  <link rel="alternate" hreflang="ru" href="/ru/project/project-template/project-template.html" />
+  <link rel="alternate" hreflang="fr" href="/fr/project/project-template/project-template.html" />
+  <meta name="description" content="3D printed Stitch miniature" />
+  <link rel="stylesheet" href="../../assets//css/styles.css" />
+  <link rel="stylesheet" href="../../assets//css/gallery-styles.css" />
+  <script src="../../assets/js/section-highlight.js" defer></script>
+  <script src="../../assets/js/language-selector.js" defer></script>
+  <script src="../../assets/js/gallery.js" defer></script>
+  <script src="../../assets/js/content-images.js" defer></script>
+  <script src="../../assets/js/project-loader.js" defer></script>
+  <script src="../../assets/js/theme-toggle.js" defer></script>
+  <link rel="icon" href="../../assets/icons/icon.png" type="image/x-icon" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      if (initialTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header>My projects</header>
+  <nav>
+    <div class="nav-center">
+      <a href="../../index.html" class="nav-link">Main</a>
+      <a href="../../3d.html" class="nav-link">3D-Print</a>
+      <a href="../../electronics.html" class="nav-link">Electronics</a>
+      <a href="../../programming.html" class="nav-link">Programming</a>
+      <a href="../../university.html" class="nav-link">University</a>
+      <a href="../../about.html" class="nav-link">About</a>
+    </div>
+
+    <div class="language-selector">
+      <button class="language-current">RU</button>
+      <ul class="language-dropdown">
+        <li data-lang="en">English</li>
+        <li data-lang="ru" class="active">Русский</li>
+        <li data-lang="fr">Français</li>
+      </ul>
+    </div>
+    <div class="theme-toggle">
+      <button id="theme-toggle-btn" aria-label="Toggle theme">
+        <img class="sun-icon theme-icon" src="../../assets/icons/sun-svgrepo-com.svg" />
+        <img class="moon-icon theme-icon" src="../../assets/icons/moon-svgrepo-com.svg" />
+      </button>
+    </div>
+  </nav>
+  
+  <main class="project-page" id="project-content">
+    <h1 class="project-title">Stitch figurine</h1>
+
+    <div class="project-gallery">
+      <img src="img/001.jpg" alt="Printed model" class="project-image">
+      <img src="img/002_1.jpg" alt="Putty work" class="project-image">
+      <img src="img/003_1.jpg" alt="Primer" class="project-image">
+      <img src="img/004_3.jpg" alt="Primed model" class="project-image">
+      <img src="img/005.webp" alt="Reference" class="project-image">
+      <img src="img/006_1.jpg" alt="First paint layers" class="project-image">
+      <img src="img/007_2.jpg" alt="Almost finished painting" class="project-image">
+      <img src="img/010.jpg" alt="Finished model" class="project-image">
+    </div>
+
+    <div class="project-details">
+      <section class="project-description">
+        <h2>Project description</h2>
+        <p>While working on the Mita figurine, I wanted to practice painting, as the last time I held brushes was back in school during art classes. Also, it was recently my cousin's birthday, so I combined these two things. Thus, this Stitch figurine appeared, which I gave to my cousin, while also gaining my first experience in painting such models before moving on to a more substantial miniature.</p>
+        <p>Among other things, this allowed me to refine the entire technology. I'd even confidently say that after this work, I can make a full-fledged guide on creating such miniatures with a 3D printer. Technically, that's exactly what I did. I only managed to make a <a href="https://youtube.com/shorts/StxhaxxTVu4?feature=share" target="_blank">short</a>, edited hastily.</p>
+      </section>
+
+      <section class="project-realisation">
+        <h2>Implementation</h2>
+        <p>Naturally, I started by searching for a model. Many didn't appeal to me, but I found <a href="https://www.printables.com/model/1235250-stich" target="_blank">this model</a> that looked not too complex, plus it had a multicolored render which made painting much easier.</p>
+        <div class="image-container">
+          <img src="img/005.webp" alt="" class="content-image image-small">
+          <div class="image-caption">Reference</div>
+        </div>
+        <p>It printed very well too, although areas above supports required additional processing. Printed with blue PETG filament on a Prusa mk3s printer, which I got from a client for improvements. More details can be found in another <a href="../auto-ejector/auto-ejector.html">project.</a></p>
+        <div class="image-container">
+          <img src="img/001.jpg" alt="" class="content-image image-medium">
+          <div class="image-caption">Printed model</div>
+        </div>
+        <p>Next came the tedious and lengthy work with putty and sandpaper. This takes the most time. I used some wood putty. It dries very quickly, is inexpensive, can be diluted with plain water to the desired consistency, and is easy to work with. Probably the best purchase. In general, I applied 2 layers: the first quite thick to quickly fill all depressions and layer lines from 3D printing, and then a thinner layer of more liquid putty to cover scratches and other imperfections. Used sandpaper grit from 120 to 240, resulting in a fairly smooth surface. However, I later regretted rushing and not perfecting the surface.</p>
+        <div class="image-container">
+          <img src="img/002_1.jpg" alt="" class="content-image image-small">
+          <img src="img/002_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Sanding process</div>
+        </div>
+        <p>After this comes priming. I used gray aerosol primer. It was also cheap and worked more than well. Didn't bother with multiple coats, just applied one main layer and then touched up where needed. Primer reveals all unevenness and scratches on a monotone color. This is where I saw there were still many areas needing work, but I decided not to spend more time on it.</p>
+        <div class="image-container">
+          <img src="img/003_1.jpg" alt="" class="content-image image-small">
+          <img src="img/003_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Primer 1st coat</div>
+        </div>
+        <div class="image-container">
+          <img src="img/004_2.jpg" alt="" class="content-image image-small">
+          <img src="img/004_3.jpg" alt="" class="content-image image-small">
+          <img src="img/004_4.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Primer 2nd coat</div>
+        </div>
+        <p>The most interesting stage: painting. As I mentioned, the last time I held brushes was in school, but it turned out very well. But let's go in order. First I bought a set of cheap paints and couldn't understand why everything was so bad - the colors literally wouldn't adhere, and the second coat would dissolve and erase the first. After that, I got more expensive paints in small tubes and finally managed to paint properly. The white color was especially different - in the cheap paint it was practically invisible.</p>
+        <div class="image-container">
+          <img src="img/005_1.jpg" alt="" class="content-image image-small">
+          <img src="img/005_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Paint tests</div>
+        </div>
+        <p>Now the actual model painting: everything went smoothly. I did this during streams and left the recordings on my channel. First applied the base colors: blue for the body and pink for the ears. The ears, by the way, I painted freehand without using stencils or anything similar, so the border isn't perfect, but I tried to make it as good as possible.</p>
+        <div class="image-container">
+          <img src="img/006_1.jpg" alt="" class="content-image image-small">
+          <img src="img/006_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Base colors</div>
+        </div>
+        <p>Then started adding small details like the blue belly, eyes, etc. There was one nuance: in some places the paint would bead up as if it didn't want to wet the surface. But this was probably because the primer didn't adhere evenly everywhere or due to the surface itself. In any case, when the paint dried slightly it adhered normally. I diluted it to a milk-like consistency, it has good coverage so that was enough. However, I noticed the black paint had slightly worse coverage than other colors. Not sure why, but I applied more coats to the eyes than other parts.</p>
+        <p>I also considered using special painting techniques to add volume, highlights and shadows, but as I got closer to the final result, I became less willing to ruin it with an awkward movement. So the painting turned out fairly simple.</p>
+        <div class="image-container">
+          <img src="img/007_1.jpg" alt="" class="content-image image-small">
+          <img src="img/007_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Painting details</div>
+        </div>
+        <p>Now the pattern on the back. It wasn't on the reference, so I had to find other pictures from different angles. Sketched a pattern on paper and tried to replicate it on the figurine. Turned out great, and the color was well matched.</p>
+        <p>You can notice some scuffs and paint chips on the tail and hairs. This probably happened from the figurine rubbing against the paper I used as a mat. Need to watch out for that.</p>
+        <div class="image-container">
+          <img src="img/008.jpg" alt="" class="content-image image-medium">
+          <div class="image-caption">Back pattern</div>
+        </div>
+        <p>And here's the final result. Before and after varnish. Nothing special to say about the varnish - from the same brand as the primer, everything worked fine.</p>
+        <p>In total, this figurine took just over two weeks of leisurely work, sometimes at night, sometimes during free time during the day. The painting alone took 9 hours total. Not bad for a first attempt, I think.</p>
+        <div class="image-container">
+          <img src="img/009.jpg" alt="" class="content-image image-small">
+          <img src="img/010.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Result</div>
+        </div>
+        <p>I consider this an extremely valuable experience, at least for consolidating all skills from putty work to painting. Although, looking ahead, my putty skills improved even more with the Mita figurine, but more on that next time. The figurine was successfully gifted, though the surprise was spoiled when my brother joined the final painting stream and saw everything ahead of time.</p>
+      </section>
+
+      <section class="project-skills" id="skills-list">
+        <!-- Dynamically filled -->
+      </section>
+    </div>
+  </main>
+</body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="mailto:pavel.ruh11@gmail.com">Email</a>
+      <a href="https://github.com/Pavelruh" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pavel-rukhliadev/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Rukhliadev Pavel. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</html>

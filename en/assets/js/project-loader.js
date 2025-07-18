@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       const container = document.getElementById('skills-list');
       container.innerHTML = `
-        <h2>Скиллы</h2>
+        <h2>Skills</h2>
         <div class="skills-list">
           ${project.skills.map(skill => `
             <span class="skill-tag">${skill}</span>
