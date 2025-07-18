@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   function formatDate(dateString) {
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('ru-RU', options);
+    return new Date(dateString).toLocaleDateString('en-US', options);
   }
   
   function initCarousels() {

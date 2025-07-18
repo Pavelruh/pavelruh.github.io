@@ -1,18 +1,18 @@
 [
   {
     "id": "auto-ejector",
-    "title": "AutoEjector для 3D-принтера",
+    "title": "AutoEjector for 3D Printer",
     "section": "electronics",
     "featured": true,
-    "description": "(Представь, что это английский)Система автоматического выброса модели после печати",
+    "description": "Automatic model ejection system after printing",
     "skills": [
       "Python",
       "Arduino (C++)",
       "OctoPrint API",
-      "3D-моделирование",
-      "3D-печать",
-      "Электроника и пайка",
-      "Проектирование схем"
+      "3D modeling",
+      "3D printing",
+      "Electronics and soldering",
+      "Circuit design"
     ],
     "images": [
       "img/ejector1.jpg",
@@ -21,63 +21,47 @@
     ],
     "tags": "arduino raspberry",
     "status": "completed",
-    "date": "2025-06-30"
+    "date": "2025-07-12"
   },
   {
-    "id": "id",
-    "title": "Титле",
+      "id": "stitch-miniature",
+      "title": "Stitch Cartoon Character Figurine",
+      "section": "3d",
+      "featured": true,
+      "description": "Hand-painted Stitch figurine created as a gift.",
+      "skills": [
+        "Model processing",
+        "3D printing",
+        "Putty work",
+        "Sanding",
+        "Painting"
+      ],
+      "images": [
+        "img/001.jpg",
+        "img/004_1.jpg",
+        "img/006_1.jpg",
+        "img/010.jpg"
+      ],
+      "tags": "miniatures painting",
+      "status": "completed",
+      "date": "2025-05-08"
+  },
+  {
+    "id": "wall-organizer",
+    "title": "Wall Organizer",
     "section": "3d",
     "featured": true,
-    "description": "ну 3д типа",
+    "description": "Simple wall organizer for sketchbooks and stationery.",
     "skills": [
-      "скилл1",
-      "скилл1"
+      "3D modeling",
+      "3D printing"
     ],
     "images": [
-      "img/1.jpg",
-      "img/2.jpg",
-      "img/3.jpg"
+      "img/003.jpg",
+      "img/002.jpg"
     ],
-    "tags": "",
-    "status": "in-progress",
-    "date": "2025-06-30"
-  },
-  {
-    "id": "id",
-    "title": "Титле",
-    "section": "programming",
-    "featured": true,
-    "description": "ну прога че",
-    "skills": [
-      "скилл1",
-      "скилл1"
-    ],
-    "images": [
-      "img/1.jpg",
-      "img/2.jpg",
-      "img/3.jpg"
-    ],
-    "tags": "",
+    "tags": "useful",
     "status": "completed",
-    "date": "2025-06-30"
-  },
-  {
-    "id": "id",
-    "title": "Титле",
-    "section": "university",
-    "featured": true,
-    "description": "универ ага",
-    "skills": [
-      "скилл1",
-      "скилл1"
-    ],
-    "images": [
-      "/img/1.jpg",
-      "/img/2.jpg",
-      "/img/3.jpg"
-    ],
-    "tags": "",
-    "status": "completed",
-    "date": "2025-06-30"
+    "date": "2025-07-07"
   }
 ]
