@@ -15,11 +15,12 @@
       "Проектирование схем"
     ],
     "images": [
-      "img/ejector1.jpg",
-      "img/ejector2.jpg",
-      "img/ejector3.jpg"
+      "img/002.png",
+      "img/030.jpg",
+      "img/018.jpg",
+      "img/028.jpg"
     ],
-    "tags": "arduino raspberry",
+    "tags": "arduino raspberry pcb",
     "status": "completed",
     "date": "2025-07-12"
   },

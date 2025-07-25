@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organisateur mural</title>
+  <link rel="alternate" hreflang="en" href="/en/project/project-template/project-template.html" />
+  <link rel="alternate" hreflang="ru" href="/ru/project/project-template/project-template.html" />
+  <link rel="alternate" hreflang="fr" href="/fr/project/project-template/project-template.html" />
+  <meta name="description" content="Organisateur mural" />
+  <link rel="stylesheet" href="../../assets//css/styles.css" />
+  <link rel="stylesheet" href="../../assets//css/gallery-styles.css" />
+  <script src="../../assets/js/section-highlight.js" defer></script>
+  <script src="../../assets/js/language-selector.js" defer></script>
+  <script src="../../assets/js/gallery.js" defer></script>
+  <script src="../../assets/js/content-images.js" defer></script>
+  <script src="../../assets/js/project-loader.js" defer></script>
+  <script src="../../assets/js/theme-toggle.js" defer></script>
+  <link rel="icon" href="../../assets/icons/icon.png" type="image/x-icon" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      if (initialTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header>Mes projets</header>
+  <nav>
+    <div class="nav-center">
+      <a href="../../index.html" class="nav-link">Accueil</a>
+      <a href="../../3d.html" class="nav-link">Impression 3D</a>
+      <a href="../../electronics.html" class="nav-link">Électronique</a>
+      <a href="../../programming.html" class="nav-link">Programmation</a>
+      <a href="../../university.html" class="nav-link">Université</a>
+      <a href="../../about.html" class="nav-link">À propos</a>
+    </div>
+
+    <div class="language-selector">
+      <button class="language-current">FR</button>
+      <ul class="language-dropdown">
+        <li data-lang="en">English</li>
+        <li data-lang="ru">Русский</li>
+        <li data-lang="fr" class="active">Français</li>
+      </ul>
+    </div>
+    <div class="theme-toggle">
+      <button id="theme-toggle-btn" aria-label="Toggle theme">
+        <img class="sun-icon theme-icon" src="../../assets/icons/sun-svgrepo-com.svg" />
+        <img class="moon-icon theme-icon" src="../../assets/icons/moon-svgrepo-com.svg" />
+      </button>
+    </div>
+  </nav>
+  
+  <main class="project-page" id="project-content">
+    <h1 class="project-title">Organisateur mural</h1>
+
+    <div class="project-gallery">
+      <img src="img/002.jpg" alt="Photo du projet" class="project-image">
+      <img src="img/003.jpg" alt="Photo du projet" class="project-image">
+    </div>
+
+    <div class="project-details">
+      <section class="project-description">
+        <h2>Description du projet</h2>
+        <p>Je voulais utiliser du filament et ranger un peu mon bureau, trouver une place pour mes carnets/cahiers de croquis tout en les gardant facilement accessibles. J'ai créé une poche pour les carnets, crayons et gommes. Finalement, elle a pu contenir presque tout le contenu de ma trousse + un pied à coulisse.</p>
+      </section>
+
+      <section class="project-realisation">
+        <h2>Réalisation</h2>
+        <p>Modélisé bien sûr dans Fusion. Initialement prévu pour contenir seulement des carnets, un crayon et une gomme, mais j'ai fait la poche assez spacieuse et elle a finalement pu contenir beaucoup plus d'objets.</p>
+        <div class="image-container">
+          <img src="img/001.png" alt="Modèle 3D" class="content-image image-large">
+          <div class="image-caption">Modèle 3D</div>
+        </div>
+        <a href="data/Wall organizer v3.stl" download="">Télécharger le modèle 3D</a>
+        <p>J'ai aussi essayé de rendre les parois plus intéressantes - j'ai ajouté des motifs hexagonaux au modèle et utilisé l'option "fuzzy skin" dans le slicer. Je n'avais jamais essayé ça avant. Le résultat est sympa et rend les couches d'impression 3D moins visibles.</p>
+        <div class="image-container">
+          <img src="img/002.jpg" alt="Texture fuzzy skin" class="content-image image-medium">
+          <div class="image-caption">Texture fuzzy skin</div>
+        </div>
+        <p>C'était aussi un test pour voir si l'imprimante pouvait retirer un grand modèle du plateau. Mais il a commencé à se décoller avant la fin de l'impression, donc le test n'a pas été très concluant.</p>
+      </section>
+
+      <section class="project-skills" id="skills-list">
+        <!-- Rempli dynamiquement -->
+      </section>
+    </div>
+  </main>
+</body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="mailto:pavel.ruh11@gmail.com">Email</a>
+      <a href="https://github.com/Pavelruh" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pavel-rukhliadev/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Rukhliadev Pavel. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+</html>

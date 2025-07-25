@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoEjector: système automatique d'éjection de modèles 3D</title>
+  <link rel="alternate" hreflang="en" href="/en/project/auto-ejector/auto-ejector.html" />
+  <link rel="alternate" hreflang="ru" href="/ru/project/auto-ejector/auto-ejector.html" />
+  <link rel="alternate" hreflang="fr" href="/fr/project/auto-ejector/auto-ejector.html" />
+  <meta name="description" content="Projet de système automatique d'éjection de modèles 3D pour imprimante Prusa MK3S" />
+  <link rel="stylesheet" href="../../assets//css/styles.css" />
+  <link rel="stylesheet" href="../../assets//css/gallery-styles.css" />
+  <script src="../../assets/js/section-highlight.js" defer></script>
+  <script src="../../assets/js/language-selector.js" defer></script>
+  <script src="../../assets/js/gallery.js" defer></script>
+  <script src="../../assets/js/content-images.js" defer></script>
+  <script src="../../assets/js/project-loader.js" defer></script>
+  <script src="../../assets/js/theme-toggle.js" defer></script>
+  <link rel="icon" href="../../assets/icons/icon.png" type="image/x-icon" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      if (initialTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header>Mes projets</header>
+
+  <nav>
+    <div class="nav-center">
+      <a href="../../index.html" class="nav-link">Accueil</a>
+      <a href="../../3d.html" class="nav-link">Impression 3D</a>
+      <a href="../../electronics.html" class="nav-link">Électronique</a>
+      <a href="../../programming.html" class="nav-link">Programmation</a>
+      <a href="../../university.html" class="nav-link">Université</a>
+      <a href="../../about.html" class="nav-link">À propos</a>
+    </div>
+
+    <div class="language-selector">
+      <button class="language-current">FR</button>
+      <ul class="language-dropdown">
+        <li data-lang="en">English</li>
+        <li data-lang="ru">Русский</li>
+        <li data-lang="fr" class="active">Français</li>
+      </ul>
+    </div>
+    <div class="theme-toggle">
+      <button id="theme-toggle-btn" aria-label="Toggle theme">
+        <img class="sun-icon theme-icon" src="../../assets/icons/sun-svgrepo-com.svg" />
+        <img class="moon-icon theme-icon" src="../../assets/icons/moon-svgrepo-com.svg" />
+      </button>
+    </div>
+  </nav>
+  
+  <main class="project-page" id="project-content">
+    <h1 class="project-title">AutoEjector: système automatique d'éjection de modèles pour imprimante 3D</h1>
+
+    <div class="project-gallery">
+      <img src="img/001.jpg" alt="Photo du projet AutoEjector 1" class="project-image">
+      <img src="img/002.png" alt="Photo du projet AutoEjector 2" class="project-image">
+      <img src="img/003.png" alt="Photo du projet AutoEjector 3" class="project-image">
+      <img src="img/015.jpg" alt="Photo du projet AutoEjector 4" class="project-image">
+      <img src="img/018.jpg" alt="Photo du projet AutoEjector 5" class="project-image">
+      <img src="img/019.jpg" alt="Photo du projet AutoEjector 6" class="project-image">
+      <img src="img/026.jpg" alt="Photo du projet AutoEjector 7" class="project-image">
+      <img src="img/028.jpg" alt="Photo du projet AutoEjector 8" class="project-image">
+      <img src="img/030.jpg" alt="Photo du projet AutoEjector 9" class="project-image">
+    </div>
+
+    <div class="project-details">
+      <section class="project-description">
+        <h2>Description du projet</h2>
+        <p>Après plusieurs mois de projets freelance en conception 3D d'équipements de laboratoire, on m'a proposé une tâche directement liée à ma spécialisation d'ingénieur. L'objectif était de créer un système qui retire automatiquement le modèle fini du plateau de l'imprimante 3D (en l'occurrence une Prusa MK3S) et lance l'impression suivante sans intervention humaine.</p>
+        <p>Le projet s'appuyait sur un concept existant disponible sur <a href="https://github.com/d-weber/prusa-chain-production" target="_blank">GitHub</a>, mais comme souvent, la pratique s'est avérée bien plus complexe. Malgré une estimation optimiste de deux semaines, le projet a duré plusieurs mois et a couvert de nombreux aspects : de l'amélioration mécanique au développement d'un plugin OctoPrint personnalisé.</p>
+        <div class="image-container">
+          <img src="img/002.png" alt="Projet original" class="content-image image-medium">
+          <div class="image-caption">Projet original</div>
+        </div>
+      </section>
+
+      <section class="project-realisation">
+        <h2>Réalisation</h2>
+        <h3>Partie matérielle</h3>
+        <p>Le travail a commencé par l'analyse des matériaux fournis par le client. Outre l'imprimante elle-même, j'ai reçu des pièces partiellement imprimées, du filament et de l'électronique. Dès la préparation, des problèmes de compatibilité des composants de la carte électronique sont apparus. Certains éléments n'avaient pas les bons empreintes dans EasyEDA, d'autres ont dû être remplacés, comme les connecteurs de ventilateurs.</p>
+        <div class="image-container">
+          <img src="img/003.png" alt="Carte électronique" class="content-image image-small">
+          <img src="img/004.jpg" alt="Connecteur inadapté" class="content-image image-small">
+          <div class="image-caption">Carte et anciens connecteurs</div>
+        </div>
+        <p>Certains composants mentionnés dans le schéma original n'ont finalement pas été utilisés : les relais et ports LED sont restés inactifs. Il manquait également certaines pièces imprimées que j'ai dû fabriquer moi-même.</p>
+        <div class="image-container">
+          <img src="img/005.jpg" alt="Pièces manquantes" class="content-image image-small">
+          <div class="image-caption">Pièces manquantes</div>
+        </div>
+        <p>Les colis avec tout le matériel sont arrivés sur un mois, avec plusieurs commandes supplémentaires nécessaires.</p>
+        <div class="image-container">
+          <img src="img/006.jpg" alt="Colis 1" class="content-image image-small">
+          <img src="img/007.jpg" alt="Colis 2" class="content-image image-small">
+          <img src="img/008.jpg" alt="Colis 3" class="content-image image-small">
+          <div class="image-caption">Livraisons</div>
+        </div>
+        <p>Le premier assemblage a révélé de nombreuses incohérences : trous mal alignés, vis trop longues, et certaines pièces sans trous de montage. J'ai dû repenser certaines parties comme les supports de moteurs pour plus de rigidité et compenser les défauts avec des rondelles plastiques d'épaisseurs variées.</p>
+        <div class="image-container">
+          <img src="img/009.jpg" alt="Vis trop longues" class="content-image image-small">
+          <img src="img/011.jpg" alt="Vis trop longues" class="content-image image-small">
+          <img src="img/010.jpg" alt="Rondelles" class="content-image image-small">
+          <img src="img/012.jpg" alt="Pièce sans fixation" class="content-image image-small">
+          <img src="img/013.jpg" alt="Version originale du support" class="content-image image-small">
+          <img src="img/014.jpg" alt="Nouvelle version du support" class="content-image image-small">
+          <div class="image-caption">Pièces problématiques</div>
+        </div>
+        <div class="image-container">
+          <img src="img/015.jpg" alt="Ensembles assemblés" class="content-image image-small">
+          <img src="img/019.jpg" alt="Fixation à l'imprimante" class="content-image image-small">
+          <div class="image-caption">Ensembles assemblés</div>
+        </div>
+        <p>Après avoir corrigé la mécanique, j'ai commandé une version révisée de la carte électronique. La commande comprenait trois cartes vierges et deux partiellement assemblées, pour environ 44 euros. Le soudage a été minimal - supports pour Arduino et pilotes de moteurs pas-à-pas.</p>
+        <div class="image-container">
+          <img src="img/016.jpg" alt="Conception de la carte" class="content-image image-small">
+          <img src="img/017.jpg" alt="Cartes fabriquées" class="content-image image-small">
+          <img src="img/018.jpg" alt="Cartes assemblées" class="content-image image-small">
+          <div class="image-caption">Cartes commandées</div>
+        </div>
+        <h3>Alimentation électrique</h3>
+        <p>L'alimentation du système a été prise sur celle de l'imprimante (24 V), nécessitant le dévissage difficile des borniers. Le projet prévoyait l'utilisation de ventilateurs 12V connectés via un régulateur linéaire. Ce montage s'est révélé non fonctionnel : le régulateur surchauffait, se mettait en protection et ne redémarrait qu'après une réinitialisation complète.</p>
+        <div class="image-container">
+          <img src="img/020.jpg" alt="Connexion à l'alimentation" class="content-image image-small">
+          <img src="img/021.jpg" alt="Régulateur" class="content-image image-small">
+          <div class="image-caption">Connexion électrique</div>
+        </div>
+        <p>Je l'ai remplacé par un convertisseur DC-DC réglable basé sur LM2596. Il a parfaitement fonctionné. Cependant, un ventilateur est tombé en panne (probablement défectueux), nécessitant un remplacement.</p>
+        <div class="image-container">
+          <img src="img/022.jpg" alt="Convertisseur" class="content-image image-small">
+          <img src="img/023.jpg" alt="Soudure du convertisseur" class="content-image image-small">
+          <div class="image-caption">Installation du convertisseur</div>
+        </div>
+        <h3>Intégration logicielle</h3>
+        <p>Le système était contrôlé via OctoPrint sur Raspberry Pi. L'Arduino se connectait en USB et communiquait avec le Pi en série. Cela a permis d'établir un échange de commandes pour contrôler les moteurs pas-à-pas et ventilateurs.</p>
+        <div class="image-container">
+          <img src="img/024.jpg" alt="Carte connectée" class="content-image image-small">
+          <img src="img/026.jpg" alt="Carte en place" class="content-image image-small">
+          <img src="img/027.jpg" alt="Connexion Raspberry pi" class="content-image image-small">
+          <div class="image-caption">Électronique de contrôle</div>
+        </div>
+        <h3>Partie logicielle</h3>
+        <p>Initialement, le projet ne disposait que d'un script Python et d'un firmware Arduino, le script étant inutilisable seul. Le firmware Arduino fonctionnait mais nécessitait des modifications. J'ai dû :
+          <ul>
+            <li>Restructurer les commandes série</li>
+            <li>Ajuster les fonctions de contrôle des moteurs pas-à-pas</li>
+            <li>Implémenter un traitement correct des états et retours</li>
+          </ul>
+          À partir du script, j'ai développé un plugin OctoPrint complet avec interface graphique et paramètres personnalisés. Le plugin :
+          <ul>
+            <li>Détecte la fin d'impression</li>
+            <li>Envoie les commandes d'éjection à l'Arduino</li>
+            <li>Lance une nouvelle impression après confirmation</li>
+          </ul>
+        </p>
+        <div class="image-container">
+          <img src="img/028.jpg" alt="Interface du plugin" class="content-image image-small">
+          <div class="image-caption">Interface du plugin</div>
+        </div>
+        <h3>Difficultés</h3>
+        <p>Le développement n'a pas été sans accroc. J'ai grillé plusieurs pilotes de moteurs (un lors du réglage du courant, probablement par court-circuit avec le multimètre, deux autres par mauvaise insertion). Un incident a endommagé les broches SPI de l'Arduino, mais j'ai pu les émuler logiciellement et souder des fils sur d'autres broches.</p>
+        <div class="image-container">
+          <img src="img/029.jpg" alt="Brochage Arduino" class="content-image image-small">
+          <div class="image-caption">Brochage Arduino</div>
+        </div>
+        <p>Ces problèmes ont ralenti le projet, mais le client a fait preuve de patience. Il y a eu des centaines de tests infructueux, certains enregistrés mais non inclus ici.</p>
+        <h3>Résultat</h3>
+        <p>Le prototype final fonctionne comme prévu. Cependant, le projet n'est pas tout à fait terminé : la version actuelle convient mieux à un utilisateur expérimenté qu'au grand public. La prochaine étape sera probablement une version 2 améliorée et plus fiable.</p>
+        <div class="image-container video-container">
+          <div class="video-wrapper">
+            <video class="responsive-video" controls>
+              <source src="video/demo.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la vidéo
+            </video>
+          </div>
+          <div class="image-caption">Démonstration du système</div>
+        </div>
+      </section>
+
+      <section class="project-skills" id="skills-list">
+        <!-- Rempli dynamiquement -->
+      </section>
+    </div>
+  </main>
+</body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="mailto:pavel.ruh11@gmail.com">Email</a>
+      <a href="https://github.com/Pavelruh" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pavel-rukhliadev/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Rukhliadev Pavel. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+</html>

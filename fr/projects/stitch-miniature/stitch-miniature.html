@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figurine Stitch</title>
+  <link rel="alternate" hreflang="en" href="/en/project/stitch-miniature/stitch-miniature.html" />
+  <link rel="alternate" hreflang="ru" href="/ru/project/stitch-miniature/stitch-miniature.html" />
+  <link rel="alternate" hreflang="fr" href="/fr/project/stitch-miniature/stitch-miniature.html" />
+  <meta name="description" content="Miniature de Stitch imprimée en 3D" />
+  <link rel="stylesheet" href="../../assets//css/styles.css" />
+  <link rel="stylesheet" href="../../assets//css/gallery-styles.css" />
+  <script src="../../assets/js/section-highlight.js" defer></script>
+  <script src="../../assets/js/language-selector.js" defer></script>
+  <script src="../../assets/js/gallery.js" defer></script>
+  <script src="../../assets/js/content-images.js" defer></script>
+  <script src="../../assets/js/project-loader.js" defer></script>
+  <script src="../../assets/js/theme-toggle.js" defer></script>
+  <link rel="icon" href="../../assets/icons/icon.png" type="image/x-icon" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      if (initialTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header>Mes projets</header>
+  <nav>
+    <div class="nav-center">
+      <a href="../../index.html" class="nav-link">Accueil</a>
+      <a href="../../3d.html" class="nav-link">Impression 3D</a>
+      <a href="../../electronics.html" class="nav-link">Électronique</a>
+      <a href="../../programming.html" class="nav-link">Programmation</a>
+      <a href="../../university.html" class="nav-link">Université</a>
+      <a href="../../about.html" class="nav-link">À propos</a>
+    </div>
+
+    <div class="language-selector">
+      <button class="language-current">FR</button>
+      <ul class="language-dropdown">
+        <li data-lang="en">English</li>
+        <li data-lang="ru">Русский</li>
+        <li data-lang="fr" class="active">Français</li>
+      </ul>
+    </div>
+    <div class="theme-toggle">
+      <button id="theme-toggle-btn" aria-label="Toggle theme">
+        <img class="sun-icon theme-icon" src="../../assets/icons/sun-svgrepo-com.svg" />
+        <img class="moon-icon theme-icon" src="../../assets/icons/moon-svgrepo-com.svg" />
+      </button>
+    </div>
+  </nav>
+  
+  <main class="project-page" id="project-content">
+    <h1 class="project-title">Figurine Stitch</h1>
+
+    <div class="project-gallery">
+      <img src="img/001.jpg" alt="Impression" class="project-image">
+      <img src="img/002_1.jpg" alt="Masticage" class="project-image">
+      <img src="img/003_1.jpg" alt="Apprêt" class="project-image">
+      <img src="img/004_3.jpg" alt="Modèle apprêté" class="project-image">
+      <img src="img/005.webp" alt="Référence" class="project-image">
+      <img src="img/006_1.jpg" alt="Premières couches de peinture" class="project-image">
+      <img src="img/007_2.jpg" alt="Modèle presque peint" class="project-image">
+      <img src="img/010.jpg" alt="Modèle fini" class="project-image">
+    </div>
+
+    <div class="project-details">
+      <section class="project-description">
+        <h2>Description du projet</h2>
+        <p>En travaillant sur la figurine de Mita, j'ai voulu m'entraîner à la peinture, car je n'avais pas tenu de pinceaux depuis les cours d'arts plastiques à l'école. De plus, c'était récemment l'anniversaire de mon frère, alors j'ai combiné ces deux choses. Ainsi est née cette figurine de Stitch que j'ai offerte à mon frère, tout en acquérant une première expérience de peinture avant de me lancer dans une miniature plus ambitieuse.</p>
+        <p>Entre autres, cela m'a permis de maîtriser toute la technique. Je pourrais même dire qu'après ce travail, je suis capable de créer un guide complet pour réaliser ce type de miniatures avec une imprimante 3D. Techniquement, c'est ce que j'ai fait, même si je n'ai publié qu'un <a href="https://youtube.com/shorts/StxhaxxTVu4?feature=share" target="_blank">short</a> monté rapidement.</p>
+      </section>
+
+      <section class="project-realisation">
+        <h2>Réalisation</h2>
+        <p>J'ai commencé par chercher un modèle. Beaucoup ne me plaisaient pas, mais j'ai finalement trouvé <a href="https://www.printables.com/model/1235250-stich" target="_blank">celui-ci</a> qui semblait assez simple et avait un rendu coloré facilitant la peinture.</p>
+        <div class="image-container">
+          <img src="img/005.webp" alt="" class="content-image image-small">
+          <div class="image-caption">Référence</div>
+        </div>
+        <p>L'impression s'est très bien passée, bien que certaines zones sous les supports aient nécessité un travail supplémentaire. J'ai utilisé du PETG bleu sur une Prusa mk3s, que j'avais reçue d'un client pour amélioration. Plus de détails dans cet autre <a href="../auto-ejector/auto-ejector.html">projet</a>.</p>
+        <div class="image-container">
+          <img src="img/001.jpg" alt="" class="content-image image-medium">
+          <div class="image-caption">Impression</div>
+        </div>
+        <p>Ensuite est venu le travail fastidieux de masticage et de ponçage. C'est l'étape qui prend le plus de temps. J'ai utilisé un mastic pour bois qui sèche rapidement, est peu coûteux, se dilue à l'eau et se travaille facilement. J'ai appliqué deux couches : une première épaisse pour combler les creux, puis une plus fine pour les imperfections. Le papier de verre allait du grain 120 à 240, donnant une surface assez lisse. J'ai cependant regretté de ne pas avoir poussé le travail plus loin.</p>
+        <div class="image-container">
+          <img src="img/002_1.jpg" alt="" class="content-image image-small">
+          <img src="img/002_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Ponçage</div>
+        </div>
+        <p>Puis j'ai appliqué une couche d'apprêt en spray gris, bon marché mais efficace. Un seul passage a suffi, révélant quelques imperfections que j'ai choisies d'ignorer.</p>
+        <div class="image-container">
+          <img src="img/003_1.jpg" alt="" class="content-image image-small">
+          <img src="img/003_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Première couche d'apprêt</div>
+        </div>
+        <div class="image-container">
+          <img src="img/004_2.jpg" alt="" class="content-image image-small">
+          <img src="img/004_3.jpg" alt="" class="content-image image-small">
+          <img src="img/004_4.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Deuxième couche d'apprêt</div>
+        </div>
+        <p>L'étape la plus intéressante : la peinture. Mes dernières expériences dataient de l'école, mais le résultat est bon. J'ai d'abord essayé des peintures bon marché qui ne couvraient pas bien, puis j'ai opté pour des peintures de meilleure qualité. Le blanc en particulier était bien plus couvrant.</p>
+        <div class="image-container">
+          <img src="img/005_1.jpg" alt="" class="content-image image-small">
+          <img src="img/005_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Test des peintures</div>
+        </div>
+        <p>La peinture proprement dite s'est bien déroulée. J'ai diffusé le processus en direct. J'ai commencé par les couleurs de base : bleu pour le corps et rose pour les oreilles. Les contours des oreilles, faits à main levée, ne sont pas parfaits mais j'ai fait de mon mieux.</p>
+        <div class="image-container">
+          <img src="img/006_1.jpg" alt="" class="content-image image-small">
+          <img src="img/006_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Couleurs de base</div>
+        </div>
+        <p>J'ai ensuite ajouté les détails : le ventre bleu clair, les yeux, etc. Certaines zones résistaient à la peinture, probablement à cause de l'apprêt ou de la surface. En diluant la peinture à la consistance du lait et en laissant sécher légèrement entre les couches, j'ai obtenu un bon résultat. Le noir a nécessité plus de couches.</p>
+        <p>J'ai envisagé des techniques avancées pour ajouter du volume, mais j'ai préféré ne pas risquer de gâcher le travail.</p>
+        <div class="image-container">
+          <img src="img/007_1.jpg" alt="" class="content-image image-small">
+          <img src="img/007_2.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Détails</div>
+        </div>
+        <p>Le motif sur le dos n'était pas visible sur la référence, j'ai donc dû chercher d'autres images. Après un croquis sur papier, je l'ai reproduit sur la figurine avec succès.</p>
+        <p>On peut voir quelques éraflures sur la queue et les poils, probablement dues au frottement contre le papier utilisé comme support.</p>
+        <div class="image-container">
+          <img src="img/008.jpg" alt="" class="content-image image-medium">
+          <div class="image-caption">Motif sur le dos</div>
+        </div>
+        <p>Voici le résultat final, avant et après vernis. Le vernis, de la même marque que l'apprêt, a bien fait son travail.</p>
+        <p>Ce projet a pris un peu plus de deux semaines de travail à temps perdu, avec environ 9 heures de peinture. Pas mal pour une première fois.</p>
+        <div class="image-container">
+          <img src="img/009.jpg" alt="" class="content-image image-small">
+          <img src="img/010.jpg" alt="" class="content-image image-small">
+          <div class="image-caption">Résultat final</div>
+        </div>
+        <p>Cette expérience a été très enrichissante, consolidant mes compétences du masticage à la peinture. Bien que j'aie encore progressé sur la figurine de Mita, c'est une autre histoire. La figurine a été offerte avec succès, même si la surprise a été gâchée : mon frère a vu le dernier stream de peinture.</p>
+      </section>
+
+      <section class="project-skills" id="skills-list">
+        <!-- Rempli dynamiquement -->
+      </section>
+    </div>
+  </main>
+</body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="mailto:pavel.ruh11@gmail.com">Email</a>
+      <a href="https://github.com/Pavelruh" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pavel-rukhliadev/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Rukhliadev Pavel. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+</html>
