@@ -60,30 +60,138 @@
   </nav>
   
   <main class="project-page" id="project-content">
-    <h1 class="project-title">AutoEjector for Prusa mk3s</h1>
+    <h1 class="project-title">AutoEjector: Automated Model Removal System for 3D Printers</h1>
 
     <div class="project-gallery">
-      <img src="img/ejector1.jpg" alt="Фото проекта AutoEjector 1" class="project-image">
-      <img src="img/ejector2.jpg" alt="Фото проекта AutoEjector 2" class="project-image">
-      <img src="img/ejector3.jpg" alt="Фото проекта AutoEjector 3" class="project-image">
+      <img src="img/001.jpg" alt="AutoEjector project photo 1" class="project-image">
+      <img src="img/002.png" alt="AutoEjector project photo 2" class="project-image">
+      <img src="img/003.png" alt="AutoEjector project photo 3" class="project-image">
+      <img src="img/015.jpg" alt="AutoEjector project photo 4" class="project-image">
+      <img src="img/018.jpg" alt="AutoEjector project photo 5" class="project-image">
+      <img src="img/019.jpg" alt="AutoEjector project photo 6" class="project-image">
+      <img src="img/026.jpg" alt="AutoEjector project photo 7" class="project-image">
+      <img src="img/028.jpg" alt="AutoEjector project photo 8" class="project-image">
+      <img src="img/030.jpg" alt="AutoEjector project photo 9" class="project-image">
     </div>
 
     <div class="project-details">
       <section class="project-description">
-        <h2>Project description</h2>
-        <p>Проект представляет собой автоматическую систему сброса 3D-модели после завершения печати на принтере Prusa MK3S. Я адаптировал и существенно переработал существующий проект, реализовав его в виде полноценного плагина для OctoPrint на Python. Также были внесены изменения в прошивку Arduino, управляющую механизмом сброса.</p>
+        <h2>Project Description</h2>
+        <p>After several months of freelance projects involving 3D design of laboratory equipment, I was offered a task directly related to my engineering specialization. The goal was to create a system that automatically removes finished models from the 3D printer bed (in this case, Prusa MK3S) and starts the next print without user intervention.</p>
+        <p>The project was based on an existing concept from <a href="https://github.com/d-weber/prusa-chain-production" target="_blank">GitHub</a>, but as often happens, practice proved much more complex than theory. Despite an optimistic estimate of completing everything in a couple of weeks, the project stretched over several months and encompassed numerous aspects: from mechanical refinements to developing a custom OctoPrint plugin.</p>
+        <div class="image-container">
+          <img src="img/002.png" alt="Original project" class="content-image image-medium">
+          <div class="image-caption">Original project concept</div>
+        </div>
       </section>
 
       <section class="project-realisation">
         <h2>Implementation</h2>
-        <p>Помимо программирования, я использовал навыки 3D-моделирования для разработки и печати механической части устройства, а также применил базовые знания электроники при сборке схемы управления. Проект значительно ускоряет процесс серийной печати, устраняя необходимость ручного вмешательства между задачами.</p>
+        <h3>Hardware Components</h3>
+        <p>The work began with analyzing materials provided by the client. Besides the printer itself, I received partially printed parts, filament, and electronics. Compatibility issues with PCB components emerged during preparation - some electronic elements lacked corresponding footprints in EasyEDA, while others needed replacement, such as fan connectors.</p>
+        <div class="image-container">
+          <img src="img/003.png" alt="PCB design" class="content-image image-small">
+          <img src="img/004.jpg" alt="Incompatible connector" class="content-image image-small">
+          <div class="image-caption">PCB and obsolete connectors</div>
+        </div>
+        <p>Certain components listed in the original schematic proved unnecessary - relays and LED ports went completely unused. It turned out that some printed parts were missing, so I printed them myself.</p>
+        <div class="image-container">
+          <img src="img/005.jpg" alt="Missing components" class="content-image image-small">
+          <div class="image-caption">Missing printed parts</div>
+        </div>
+        <p>Materials arrived over the course of a month, and later several additional orders were required.</p>
+        <div class="image-container">
+          <img src="img/006.jpg" alt="Package 1" class="content-image image-small">
+          <img src="img/007.jpg" alt="Package 2" class="content-image image-small">
+          <img src="img/008.jpg" alt="Package 3" class="content-image image-small">
+          <div class="image-caption">Component shipments</div>
+        </div>
+        <p>Initial assembly revealed multiple mismatches: some holes were too small, screws were longer than needed, and some parts completely lacked mounting holes. This necessitated redesigning certain components like motor mounts for increased rigidity and compensating for inconsistencies with plastic washers of varying thickness.</p>
+        <div class="image-container">
+          <img src="img/009.jpg" alt="Oversized screws" class="content-image image-small">
+          <img src="img/011.jpg" alt="Oversized screws" class="content-image image-small">
+          <img src="img/010.jpg" alt="Compensation washers" class="content-image image-small">
+          <img src="img/012.jpg" alt="Part without mounts" class="content-image image-small">
+          <img src="img/013.jpg" alt="Original mount version" class="content-image image-small">
+          <img src="img/014.jpg" alt="Revised mount version" class="content-image image-small">
+          <div class="image-caption">Problematic components</div>
+        </div>
+        <div class="image-container">
+          <img src="img/015.jpg" alt="Assembled units" class="content-image image-small">
+          <img src="img/019.jpg" alt="Printer attachment" class="content-image image-small">
+          <div class="image-caption">Completed assemblies</div>
+        </div>
+        <p>After mechanical adjustments, I ordered a revised PCB version. The order included three blank boards and two partially assembled ones, costing ~€44. Minimal soldering was required - just Arduino headers and stepper motor drivers.</p>
+        <div class="image-container">
+          <img src="img/016.jpg" alt="PCB design" class="content-image image-small">
+          <img src="img/017.jpg" alt="Manufactured PCBs" class="content-image image-small">
+          <img src="img/018.jpg" alt="Assembled PCBs" class="content-image image-small">
+          <div class="image-caption">Custom ordered PCBs</div>
+        </div>
+        <h3>Power Supply</h3>
+        <p>The system was powered by the printer's PSU (24V), requiring difficult terminal disconnections. The design specified 12V fans connected through a linear voltage regulator. This configuration failed - the regulator overheated, entered protection mode, and wouldn't reset without complete power cycling.</p>
+        <div class="image-container">
+          <img src="img/020.jpg" alt="PSU connection" class="content-image image-small">
+          <img src="img/021.jpg" alt="Voltage regulator" class="content-image image-small">
+          <div class="image-caption">Power supply setup</div>
+        </div>
+        <p>I replaced it with an adjustable LM2596-based DC-DC converter which performed flawlessly. However, one fan soon failed (likely defective) and required replacement.</p>
+        <div class="image-container">
+          <img src="img/022.jpg" alt="DC-DC converter" class="content-image image-small">
+          <img src="img/023.jpg" alt="Converter soldering" class="content-image image-small">
+          <div class="image-caption">Converter installation</div>
+        </div>
+        <h3>Control Software Integration</h3>
+        <p>The entire system was controlled through OctoPrint on Raspberry Pi. The Arduino connected via USB and communicated with the Pi through Serial, enabling command exchange for stepper motor and fan control.</p>
+        <div class="image-container">
+          <img src="img/024.jpg" alt="Connected board" class="content-image image-small">
+          <img src="img/026.jpg" alt="Board placement" class="content-image image-small">
+          <img src="img/027.jpg" alt="Raspberry Pi connection" class="content-image image-small">
+          <div class="image-caption">Control electronics</div>
+        </div>
+        <h3>Software Development</h3>
+        <p>The original project only included a Python script and Arduino firmware. The script was non-functional, while the firmware required significant modifications. I had to:
+          <ul>
+            <li>Redesign serial commands</li>
+            <li>Adjust stepper motor control functions</li>
+            <li>Implement proper status handling and feedback</li>
+          </ul>
+          Using the script as a base, I developed a full-featured OctoPrint plugin with GUI and custom settings. The plugin:
+          <ul>
+            <li>Monitors print completion</li>
+            <li>Sends model ejection commands to Arduino</li>
+            <li>Initiates new prints after successful removal confirmation</li>
+          </ul>
+        </p>
+        <div class="image-container">
+          <img src="img/028.jpg" alt="Plugin interface" class="content-image image-small">
+          <div class="image-caption">Plugin interface</div>
+        </div>
+        <h3>Challenges</h3>
+        <p>Development wasn't without technical setbacks. I accidentally burned several stepper drivers (one while adjusting current, likely by shorting contacts with a multimeter probe; two others from incorrect PCB installation). One incident damaged Arduino SPI pins, but I implemented software SPI emulation and manually soldered wires to alternative pins.</p>
+        <div class="image-container">
+          <img src="img/029.jpg" alt="Arduino pinout" class="content-image image-small">
+          <div class="image-caption">Arduino pin mapping</div>
+        </div>
+        <p>These issues significantly slowed progress, but fortunately the client remained patient. There were hundreds of failed attempts and tests, some recorded for documentation but unsuitable for this article.</p>
+        <h3>Results</h3>
+        <p>The final prototype successfully performs all required functions. However, the project isn't truly complete - the current version suits experienced users more than general consumers. The next step will likely involve developing a more refined and reliable second version.</p>
+        <div class="image-container video-container">
+          <div class="video-wrapper">
+            <video class="responsive-video" controls>
+              <source src="video/demo.mp4" type="video/mp4">
+              Your browser doesn't support video
+            </video>
+          </div>
+          <div class="image-caption">System demonstration</div>
+        </div>
       </section>
 
       <section class="project-skills" id="skills-list">
-        <!-- Динамически заполняется -->
+        <!-- Dynamically filled -->
       </section>
     </div>
-  </main>
+</main>
 </body>
 <footer class="site-footer">
   <div class="footer-content">

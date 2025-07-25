@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="alternate" hreflang="en" href="/en/project/project-template/project-template.html" />
+  <link rel="alternate" hreflang="ru" href="/ru/project/project-template/project-template.html" />
+  <link rel="alternate" hreflang="fr" href="/fr/project/project-template/project-template.html" />
+  <meta name="description" content="**DESCRIPTION DU PROJET**" />
+  <link rel="stylesheet" href="../../assets//css/styles.css" />
+  <link rel="stylesheet" href="../../assets//css/gallery-styles.css" />
+  <script src="../../assets/js/section-highlight.js" defer></script>
+  <script src="../../assets/js/language-selector.js" defer></script>
+  <script src="../../assets/js/gallery.js" defer></script>
+  <script src="../../assets/js/content-images.js" defer></script>
+  <script src="../../assets/js/project-loader.js" defer></script>
+  <script src="../../assets/js/theme-toggle.js" defer></script>
+  <link rel="icon" href="../../assets/icons/icon.png" type="image/x-icon" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      if (initialTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header>Mes projets</header>
+  <nav>
+    <div class="nav-center">
+      <a href="../../index.html" class="nav-link">Accueil</a>
+      <a href="../../3d.html" class="nav-link">Impression 3D</a>
+      <a href="../../electronics.html" class="nav-link">Électronique</a>
+      <a href="../../programming.html" class="nav-link">Programmation</a>
+      <a href="../../university.html" class="nav-link">Université</a>
+      <a href="../../about.html" class="nav-link">À propos</a>
+    </div>
+
+    <div class="language-selector">
+      <button class="language-current">FR</button>
+      <ul class="language-dropdown">
+        <li data-lang="en">English</li>
+        <li data-lang="ru">Русский</li>
+        <li data-lang="fr" class="active">Français</li>
+      </ul>
+    </div>
+    <div class="theme-toggle">
+      <button id="theme-toggle-btn" aria-label="Toggle theme">
+        <img class="sun-icon theme-icon" src="../../assets/icons/sun-svgrepo-com.svg" />
+        <img class="moon-icon theme-icon" src="../../assets/icons/moon-svgrepo-com.svg" />
+      </button>
+    </div>
+  </nav>
+  
+  <main class="project-page" id="project-content">
+    <h1 class="project-title">**TITRE DU PROJET**</h1>
+
+    <div class="project-gallery">
+      <img src="img/01.jpg" alt="Photo du projet" class="project-image">
+      <img src="img/02.jpg" alt="Photo du projet" class="project-image">
+      <img src="img/03.jpg" alt="Photo du projet" class="project-image">
+    </div>
+
+    <div class="project-details">
+      <section class="project-description">
+        <h2>Description du projet</h2>
+        <p></p>
+        <!-- <div class="image-container">
+          <img src="img/001.jpg" alt="Exemple de travail" class="content-image image-small">
+          <img src="img/001.jpg" alt="Exemple de travail" class="content-image image-medium">
+          <img src="img/001.jpg" alt="Exemple de travail" class="content-image image-large">
+          <div class="image-caption">Légende</div>
+        </div> -->
+      </section>
+
+      <section class="project-realisation">
+        <h2>Réalisation</h2>
+        <p></p>
+      </section>
+
+      <section class="project-skills" id="skills-list">
+        <!-- Rempli dynamiquement -->
+      </section>
+    </div>
+  </main>
+</body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="mailto:pavel.ruh11@gmail.com">Email</a>
+      <a href="https://github.com/Pavelruh" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pavel-rukhliadev/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Rukhliadev Pavel. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+</html>

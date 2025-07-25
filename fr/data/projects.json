@@ -1,0 +1,68 @@
+[
+  {
+    "id": "auto-ejector",
+    "title": "AutoEjector pour imprimante 3D",
+    "section": "electronics",
+    "featured": true,
+    "description": "Système automatique d'éjection de modèles après impression",
+    "skills": [
+      "Python",
+      "Arduino",
+      "API OctoPrint",
+      "Modélisation 3D",
+      "Impression 3D",
+      "Électronique et soudure",
+      "Conception de circuits"
+    ],
+    "images": [
+      "img/002.png",
+      "img/030.jpg",
+      "img/018.jpg",
+      "img/028.jpg"
+    ],
+    "tags": "arduino raspberry pcb",
+    "status": "completed",
+    "date": "2025-07-12"
+  },
+  {
+    "id": "stitch-miniature",
+    "title": "Figurine Stitch",
+    "section": "3d",
+    "featured": true,
+    "description": "Figurine Stitch peinte à la main créée comme cadeau.",
+    "skills": [
+      "Traitement de modèles",
+      "Impression 3D",
+      "Travail du mastic",
+      "Ponçage",
+      "Peinture"
+    ],
+    "images": [
+      "img/001.jpg",
+      "img/004_1.jpg",
+      "img/006_1.jpg",
+      "img/010.jpg"
+    ],
+    "tags": "miniatures peinture",
+    "status": "completed",
+    "date": "2025-05-08"
+  },
+  {
+    "id": "wall-organizer",
+    "title": "Organisateur mural",
+    "section": "3d",
+    "featured": true,
+    "description": "Organisateur mural simple pour carnets et fournitures.",
+    "skills": [
+      "Modélisation 3D",
+      "Impression 3D"
+    ],
+    "images": [
+      "img/003.jpg",
+      "img/002.jpg"
+    ],
+    "tags": "utile",
+    "status": "completed",
+    "date": "2025-07-07"
+  }
+]

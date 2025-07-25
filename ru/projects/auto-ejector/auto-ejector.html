@@ -7,12 +7,13 @@
   <link rel="alternate" hreflang="en" href="/en/project/auto-ejector/auto-ejector.html" />
   <link rel="alternate" hreflang="ru" href="/ru/project/auto-ejector/auto-ejector.html" />
   <link rel="alternate" hreflang="fr" href="/fr/project/auto-ejector/auto-ejector.html" />
-  <meta name="description" content="Проект автоматической системы сброса 3D-модели для принтера Prusa MK3S" />
+  <meta name="description" content="Проект автоматической системы снятия 3D-модели для принтера Prusa MK3S" />
   <link rel="stylesheet" href="../../assets//css/styles.css" />
   <link rel="stylesheet" href="../../assets//css/gallery-styles.css" />
   <script src="../../assets/js/section-highlight.js" defer></script>
   <script src="../../assets/js/language-selector.js" defer></script>
   <script src="../../assets/js/gallery.js" defer></script>
+  <script src="../../assets/js/content-images.js" defer></script>
   <script src="../../assets/js/project-loader.js" defer></script>
   <script src="../../assets/js/theme-toggle.js" defer></script>
   <link rel="icon" href="../../assets/icons/icon.png" type="image/x-icon" />
@@ -59,23 +60,130 @@
   </nav>
   
   <main class="project-page" id="project-content">
-    <h1 class="project-title">AutoEjector для 3D принтера</h1>
+    <h1 class="project-title">AutoEjector: система автоматического снятия модели с 3D-принтера</h1>
 
     <div class="project-gallery">
-      <img src="img/ejector1.jpg" alt="Фото проекта AutoEjector 1" class="project-image">
-      <img src="img/ejector2.jpg" alt="Фото проекта AutoEjector 2" class="project-image">
-      <img src="img/ejector3.jpg" alt="Фото проекта AutoEjector 3" class="project-image">
+      <img src="img/001.jpg" alt="Фото проекта AutoEjector 1" class="project-image">
+      <img src="img/002.png" alt="Фото проекта AutoEjector 2" class="project-image">
+      <img src="img/003.png" alt="Фото проекта AutoEjector 3" class="project-image">
+      <img src="img/015.jpg" alt="Фото проекта AutoEjector 4" class="project-image">
+      <img src="img/018.jpg" alt="Фото проекта AutoEjector 5" class="project-image">
+      <img src="img/019.jpg" alt="Фото проекта AutoEjector 6" class="project-image">
+      <img src="img/026.jpg" alt="Фото проекта AutoEjector 7" class="project-image">
+      <img src="img/028.jpg" alt="Фото проекта AutoEjector 8" class="project-image">
+      <img src="img/030.jpg" alt="Фото проекта AutoEjector 9" class="project-image">
     </div>
 
     <div class="project-details">
       <section class="project-description">
         <h2>Описание проекта</h2>
-        <p>Проект представляет собой автоматическую систему сброса 3D-модели после завершения печати на принтере Prusa MK3S. Я адаптировал и существенно переработал существующий проект, реализовав его в виде полноценного плагина для OctoPrint на Python. Также были внесены изменения в прошивку Arduino, управляющую механизмом сброса.</p>
+        <p>После нескольких месяцев фриланс-проектов, связанных с 3D-дизайном лабораторного оборудования, мне предложили задачу, напрямую связанную с моей инженерной специализацией. Цель заключалась в создании системы, которая автоматически снимает готовую модель со стола 3D-принтера (в данном случае Prusa MK3S) и запускает следующую печать без участия пользователя.</p>
+        <p>Проект основывался на существующей концепции с <a href="https://github.com/d-weber/prusa-chain-production" target="_blank">GitHub</a>, но, как часто бывает, на практике всё оказалось гораздо сложнее. Несмотря на оптимистичный прогноз — завершить всё за пару недель, проект затянулся на несколько месяцев и охватил множество аспектов: от доработки механики до разработки собственного OctoPrint-плагина.</p>
+        <div class="image-container">
+          <img src="img/002.png" alt="Проект" class="content-image image-medium">
+          <div class="image-caption">Оригинальный проект</div>
+        </div>
       </section>
 
       <section class="project-realisation">
         <h2>Реализация</h2>
-        <p>Помимо программирования, я использовал навыки 3D-моделирования для разработки и печати механической части устройства, а также применил базовые знания электроники при сборке схемы управления. Проект значительно ускоряет процесс серийной печати, устраняя необходимость ручного вмешательства между задачами.</p>
+        <h3>Аппаратная часть</h3>
+        <p>Работа началась с анализа предоставленных заказчиком материалов. Помимо самого принтера, я получил частично напечатанные детали, филамент и электронику. Уже на стадии подготовки возникли проблемы с совместимостью компонентов печатной платы. Некоторые электронные элементы не имели соответствующих футпринтов в EasyEDA, другие — пришлось заменить, например, разъёмы для вентиляторов.</p>
+        <div class="image-container">
+          <img src="img/003.png" alt="Плата" class="content-image image-small">
+          <img src="img/004.jpg" alt="Неподходящий разъем" class="content-image image-small">
+          <div class="image-caption">Плата и старые разъемы</div>
+        </div>
+        <p>Определённые компоненты, заявленные в оригинальной схеме, так и не пригодились: реле и LED-порты не использовались вовсе. Выяснилось что некоторых печатных деталей не хватало, я напечатал их самостоятельно.</p>
+        <div class="image-container">
+          <img src="img/005.jpg" alt="Недостающие детали" class="content-image image-small">
+          <div class="image-caption">Недостающие детали</div>
+        </div>
+        <p>Посылки со всеми материалами приходили в течение месяца, плюс приходилось несколько раз делать дополнительные заказы.</p><div class="image-container">
+          <img src="img/006.jpg" alt="Посылка 1" class="content-image image-small">
+          <img src="img/007.jpg" alt="Посылка 2" class="content-image image-small">
+          <img src="img/008.jpg" alt="Посылка 3" class="content-image image-small">
+          <div class="image-caption">Посылки</div>
+        </div>
+        <p>Первая сборка выявила массу несоответствий: отверстия не совпадали с необходимыми размерами, винты были длиннее необходимых, а у некоторых деталей и вовсе отсутствовали монтажные отверстия. В результате пришлось переработать Некоторые части, такие как крепление моторов для повышения жёсткости и компенсировать несостыковки пластиковыми шайбами разной толщины.</p>
+        <div class="image-container">
+          <img src="img/009.jpg" alt="Слишком длинные винты" class="content-image image-small">
+          <img src="img/011.jpg" alt="Слишком длинные винты" class="content-image image-small">
+          <img src="img/010.jpg" alt="Шайбы" class="content-image image-small">
+          <img src="img/012.jpg" alt="Деталь без креплений" class="content-image image-small">
+          <img src="img/013.jpg" alt="Оригинальная версия крепления" class="content-image image-small">
+          <img src="img/014.jpg" alt="Новая версия крепления" class="content-image image-small">
+          <div class="image-caption">Проблемные детали</div>
+        </div>
+        <div class="image-container">
+          <img src="img/015.jpg" alt="Собранные узлы" class="content-image image-small">
+          <img src="img/019.jpg" alt="Крепление к принтеру" class="content-image image-small">
+          <div class="image-caption">Собранные узлы</div>
+        </div>
+        <p>После корректировки механики я заказал переработанную версию печатной платы. Заказ включал в себя три пустые платы и две частично собранные, что обошлось в ~44 евро. Паять пришлось немного — стойки под Arduino и драйверы шаговых моторов.</p>
+        <div class="image-container">
+          <img src="img/016.jpg" alt="Дизайн платы" class="content-image image-small">
+          <img src="img/017.jpg" alt="Изготовленные платы" class="content-image image-small">
+          <img src="img/018.jpg" alt="Собранные платы" class="content-image image-small">
+          <div class="image-caption">Заказанные платы</div>
+        </div>
+        <h3>Электропитание</h3>
+        <p>Питание всей системы было решено взять от блока питания принтера (24 В), для чего мне с трудом пришлось откручивать клеммы. В проекте предусматривалось использование 12-вольтовых вентиляторов, подключённых через линейный стабилизатор напряжения. Эта схема оказалась неработоспособной: стабилизатор перегревался, уходил в защиту и даже после снятия нагрузки не восстанавливался без полной перезагрузки.</p>
+        <div class="image-container">
+          <img src="img/020.jpg" alt="Подключение к БП принтера" class="content-image image-small">
+          <img src="img/021.jpg" alt="Стабилизатор" class="content-image image-small">
+          <div class="image-caption">Подключение питания</div>
+        </div>
+        <p>Я заменил его на регулируемый понижающий DC-DC-преобразователь на базе LM2596. Он справился с задачей отлично. Однако один из вентиляторов вскоре вышел из строя (предположительно брак), пришлось заказать новый.</p>
+        <div class="image-container">
+          <img src="img/022.jpg" alt="Преобразователь" class="content-image image-small">
+          <img src="img/023.jpg" alt="Пайка преобразователя" class="content-image image-small">
+          <div class="image-caption">Подключение преобразователя</div>
+        </div>
+        <h3>Подключение к управляющему ПО</h3>
+        <p>Вся система управлялась через OctoPrint на Raspberry Pi. Arduino подключалась по USB и взаимодействовала с Pi через Serial. Это позволило наладить обмен командами для управления шаговыми моторами и вентиляторами.</p>
+        <div class="image-container">
+          <img src="img/024.jpg" alt="Подключенная плата" class="content-image image-small">
+          <img src="img/026.jpg" alt="Плата на посадочном месте" class="content-image image-small">
+          <img src="img/027.jpg" alt="Подключение Raspberry pi" class="content-image image-small">
+          <div class="image-caption">Управляющая электроника</div>
+        </div>
+        <h3>Программная часть</h3>
+        <p>Изначально в проекте доступен только скрипт на python и прошивка для Arduino, скрипт не представлял из себя ничего, он буквально не мог работать сам по себе. Прошивка Arduino, в свою очередь, хоть и работала, нуждалась в правках. Мне пришлось:
+          <ul>
+            <li>Переработать сериал-команды.</li>
+            <li>Откорректировать функции работы с шаговыми моторами.</li>
+            <li>Реализовать адекватную обработку статуса и обратной связи.</li>
+          </ul>
+          На базе скрипта я написал полноценный OctoPrint-плагин с графическим интерфейсом и собственным набором настроек. Плагин:
+          <ul>
+            <li>Отслеживает завершение печати.</li>
+            <li>Отдаёт команды Arduino на сброс модели.</li>
+            <li>Инициализирует новую печать после подтверждения успешного снятия.</li>
+          </ul>
+        </p>
+        <div class="image-container">
+          <img src="img/028.jpg" alt="Интерфейс плагина" class="content-image image-small">
+          <div class="image-caption">Интерфейс плагина</div>
+        </div>
+        <h3>Трудности</h3>
+        <p>Во время разработки не обошлось без технических неудач. Я по ошибке сжёг несколько драйверов шаговых моторов (один — при попытке настройки тока, видимо случайно замкнул контакты щупом мультиметра, два других — при неправильной установке в плату). Один из инцидентов повредил пины SPI на Arduino, но мне удалось перевести их на программную эмуляцию и вручную припаять провода к альтернативным пинам.</p>
+        <div class="image-container">
+          <img src="img/029.jpg" alt="Распиновка Arduino" class="content-image image-small">
+          <div class="image-caption">Распиновка Arduino</div>
+        </div>
+        <p>Такие моменты существенно тормозили процесс, но, к счастью, заказчик проявил терпение и понимание. Кроме этого, были сотни неудачных попыток и тестов, часть из них я записывал для архива, но те видео не подходят под формат этой статьи.</p>
+        <h3>Результат</h3>
+        <p>В итоге получился рабочий прототип, способный выполнять все заявленные функции. Несмотря на это, проект нельзя назвать законченным: текущая версия больше подходит для опытного пользователя, чем для широкой публики. Следующим шагом, скорее всего, станет разработка второй, доработанной и более надёжной версии.</p>
+        <div class="image-container video-container">
+          <div class="video-wrapper">
+            <video class="responsive-video" controls>
+              <source src="video/demo.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео
+            </video>
+          </div>
+          <div class="image-caption">Демонстрация работы системы</div>
+        </div>
       </section>
 
       <section class="project-skills" id="skills-list">

@@ -509,6 +509,27 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Соотношение 16:9 */
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  background: #000;
+}
+
+.responsive-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .image-container {
@@ -525,6 +546,12 @@ nav a:hover {
     max-height: 200px;
     width: 100%;
   }
+
+  .video-container {
+    margin: 1.5rem 0;
+    border-radius: 0;
+  }
+
 }
 
 /* Для темной темы */
@@ -536,6 +563,9 @@ nav a:hover {
 [data-theme="dark"] .content-image:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   opacity: 1;
+}
+[data-theme="dark"] .video-wrapper {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Стили для карусели */

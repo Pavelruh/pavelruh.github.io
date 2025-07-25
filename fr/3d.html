@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impression 3D</title>
+  <link rel="alternate" hreflang="en" href="/en/3d.html" />
+  <link rel="alternate" hreflang="ru" href="/ru/3d.html" />
+  <link rel="alternate" hreflang="fr" href="/fr/3d.html" />
+  <meta name="description" content="Section sur les projets d'impression 3D." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/card-loader.js" defer></script>
+  <script src="assets/js/language-selector.js" defer></script>
+  <script src="assets/js/section-highlight.js" defer></script>
+  <script src="assets/js/theme-toggle.js" defer></script>
+  <link rel="icon" href="assets/icons/icon.png" type="image/x-icon" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      if (initialTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header>My projects</header>
+
+  <!-- Навигационное меню -->
+  <nav>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="3d.html" class="nav-link">Impression 3D</a>
+      <a href="electronics.html" class="nav-link">Électronique</a>
+      <a href="programming.html" class="nav-link">Programmation</a>
+      <a href="university.html" class="nav-link">Université</a>
+      <a href="about.html" class="nav-link">À propos</a>
+    </div>
+    
+    <div class="language-selector">
+      <button class="language-current">RU</button>
+      <ul class="language-dropdown">
+        <li data-lang="en">English</li>
+        <li data-lang="ru" class="active">Русский</li>
+        <li data-lang="fr">Français</li>
+      </ul>
+    </div>
+    <div class="theme-toggle">
+      <button id="theme-toggle-btn" aria-label="Toggle theme">
+        <img class="sun-icon theme-icon" src="assets/icons/sun-svgrepo-com.svg" />
+        <img class="moon-icon theme-icon" src="assets/icons/moon-svgrepo-com.svg" />
+      </button>
+    </div>
+  </nav>
+
+  <main class="section-page with-sidebar">
+    <!-- Боковой фильтр -->
+    <aside class="sidebar-filter">
+      <h4>Filters</h4>
+      <ul class="filter-list">
+        <li><button class="filter-button active" data-filter="all">All</button></li>
+        <li><button class="filter-button" data-filter="1">1</button></li>
+        <li><button class="filter-button" data-filter="in-progress">In progress</button></li>
+      </ul>
+    </aside>
+    
+    <!-- Список проектов -->
+    <div class="main-content">
+      <h2 class="section-title">3D-Printing</h2>
+      <div class="project-grid">
+        <!-- Заполняется с JS-->
+      </div>
+    </div>
+  </main>
+</body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="mailto:pavel.ruh11@gmail.com">Email</a>
+      <a href="https://github.com/Pavelruh" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pavel-rukhliadev/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Rukhliadev Pavel. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</html>
